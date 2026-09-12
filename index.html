@@ -476,6 +476,7 @@
         <button id="btn-log" class="quick-btn">查看 PID 日志</button>
         <button id="btn-proc" class="quick-btn">检查 PID</button>
         <button id="btn-reload" class="quick-btn">刷新重跑</button>
+        <button id="btn-clear" class="quick-btn">清空终端</button>
       </div>
       <div id="out"></div>
     </div>
@@ -773,6 +774,10 @@
     });
     document.getElementById('btn-reload').addEventListener('click', function() {
       location.reload();
+    });
+    document.getElementById('btn-clear').addEventListener('click', function() {
+      outEl.textContent = '';
+      autoScroll = true;
     });
   </script>
 </body>

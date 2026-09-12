@@ -664,6 +664,7 @@
 
     // ====== AI 辅助快捷按钮：查看最近 spawn 的 PID / 日志，刷新重跑 ======
     document.getElementById('btn-log').addEventListener('click', function() {
+      autoScroll = true;
       var sp = window.__lastSpawn;
       if (!sp || !window.runCommand) {
         appendOutput('还没有可用的 PID/日志，请先执行一次获取 Root。');
@@ -674,6 +675,7 @@
       appendOutput(r.output || '(无输出)');
     });
     document.getElementById('btn-proc').addEventListener('click', function() {
+      autoScroll = true;
       var sp = window.__lastSpawn;
       if (!sp || !window.runCommand) {
         appendOutput('还没有可用的 PID，请先执行一次获取 Root。');

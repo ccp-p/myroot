@@ -366,6 +366,45 @@
     }
     #cmd::placeholder { color: var(--cmd-placeholder); }
 
+    /* 流程进度 */
+    #prog-row { display: flex; flex-wrap: wrap; gap: 6px; }
+    .stage {
+      padding: 4px 9px;
+      border: 1px solid var(--btn-secondary-border);
+      border-radius: 999px;
+      font-size: 11px;
+      color: var(--text-muted);
+      background: var(--btn-secondary-bg);
+      white-space: nowrap;
+      transition: all 0.25s;
+    }
+    .stage.active {
+      color: var(--ksu-link-color);
+      border-color: var(--ksu-link-border);
+      background: var(--ksu-link-hover-bg);
+      animation: stagePulse 1.4s ease-in-out infinite;
+    }
+    .stage.done { color: #3aa65a; border-color: rgba(40,180,70,0.4); background: rgba(40,180,70,0.1); }
+    .stage.fail { color: #d04a4a; border-color: rgba(200,60,60,0.4); background: rgba(200,60,60,0.1); }
+    @keyframes stagePulse { 0%,100% { opacity: 1; } 50% { opacity: 0.55; } }
+    #prog-bar {
+      margin-top: 8px;
+      height: 4px;
+      border-radius: 2px;
+      background: var(--btn-secondary-bg);
+      overflow: hidden;
+    }
+    #prog-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: 2px;
+      background: linear-gradient(90deg, rgba(120,80,255,0.85), rgba(80,60,200,0.85));
+      transition: width 0.4s;
+    }
+    #prog-fill.indeterminate { width: 35%; animation: barSlide 1.2s ease-in-out infinite alternate; }
+    @keyframes barSlide { from { margin-left: 0; } to { margin-left: 65%; } }
+    #prog-note { font-size: 11px; color: var(--status-color); }
+
     #quick-row {
       display: flex;
       gap: 8px;
@@ -439,6 +478,23 @@
         <button id="btn-reload" class="quick-btn">刷新重跑</button>
       </div>
       <div id="out"></div>
+    </div>
+
+    <!-- 流程进度面板 -->
+    <div class="panel" style="padding:0.8rem 1.1rem 0.9rem;">
+      <div class="panel-title" style="margin-bottom:0.6rem;">
+        <span>流程进度</span>
+        <span id="prog-note">待机</span>
+      </div>
+      <div id="prog-row">
+        <span class="stage" data-stage="upload">上传</span>
+        <span class="stage" data-stage="spawn">启动</span>
+        <span class="stage" data-stage="scan">扫描</span>
+        <span class="stage" data-stage="w1">W1 写入</span>
+        <span class="stage" data-stage="root">Root</span>
+        <span class="stage" data-stage="ksu">KernelSU</span>
+      </div>
+      <div id="prog-bar"><div id="prog-fill"></div></div>
     </div>
   </div>
 
@@ -661,6 +717,37 @@
 
     // ====== 启动 ======
     loadManifest();
+
+    // ====== 流程进度 API（exploit.js 通过 window.__prog / __progBar 调用） ======
+    var progStages = ['upload','spawn','scan','w1','root','ksu'];
+    window.__prog = function(stage, state, note) {
+      var idx = progStages.indexOf(stage);
+      progStages.forEach(function(s, i) {
+        var el = document.querySelector('.stage[data-stage="' + s + '"]');
+        if (!el) return;
+        if (idx < 0 || i > idx) el.className = 'stage';
+      });
+      var el = document.querySelector('.stage[data-stage="' + stage + '"]');
+      if (el) el.className = 'stage ' + (state || '');
+      if (typeof note === 'string') document.getElementById('prog-note').textContent = note;
+    };
+    window.__progBar = function(pct, indeterminate, note) {
+      var fill = document.getElementById('prog-fill');
+      if (indeterminate) {
+        fill.className = 'indeterminate';
+      } else {
+        fill.className = '';
+        fill.style.width = Math.max(0, Math.min(100, pct)) + '%';
+      }
+      if (typeof note === 'string') document.getElementById('prog-note').textContent = note;
+    };
+    window.__progReset = function() {
+      progStages.forEach(function(s) {
+        var el = document.querySelector('.stage[data-stage="' + s + '"]');
+        if (el) el.className = 'stage';
+      });
+      window.__progBar(0, false, '待机');
+    };
 
     // ====== AI 辅助快捷按钮：查看最近 spawn 的 PID / 日志，刷新重跑 ======
     document.getElementById('btn-log').addEventListener('click', function() {

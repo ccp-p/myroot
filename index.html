@@ -342,13 +342,13 @@
       white-space: pre-wrap;
       word-break: break-all;
       font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
-      padding: 20px 20px 80px;
+      padding: 12px 14px;
       color: var(--terminal-text);
       font-weight: 400;
       font-size: 13px;
       line-height: 1.6;
-      min-height: 200px;
-      max-height: 400px;
+      min-height: 120px;
+      max-height: 200px;
       overflow-y: auto;
       background: var(--terminal-bg);
     }
@@ -365,6 +365,27 @@
       outline: none;
     }
     #cmd::placeholder { color: var(--cmd-placeholder); }
+
+    #quick-row {
+      display: flex;
+      gap: 8px;
+      padding: 10px;
+      border-top: 1px solid var(--panel-border);
+      background: var(--cmd-bg);
+    }
+    .quick-btn {
+      flex: 1;
+      padding: 9px 6px;
+      border: 1px solid var(--btn-secondary-border);
+      border-radius: 10px;
+      background: var(--btn-secondary-bg);
+      color: var(--btn-secondary-text);
+      font-size: 12px;
+      font-family: inherit;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .quick-btn:hover { background: var(--btn-secondary-hover-bg); color: var(--text-primary); }
 
     @media (max-width: 480px) {
       body { padding: 0.5rem 0; }
@@ -409,10 +430,15 @@
       </div>
     </div>
 
-    <!-- 终端面板 -->
+    <!-- 终端面板：输入置顶，输出窗口保持矮小 -->
     <div class="panel" style="padding:0;overflow:hidden;">
-      <div id="out"></div>
       <input id="cmd" autofocus placeholder="Shell 就绪后在此输入命令 (exit 退出)">
+      <div id="quick-row">
+        <button id="btn-log" class="quick-btn">查看 PID 日志</button>
+        <button id="btn-proc" class="quick-btn">检查 PID</button>
+        <button id="btn-reload" class="quick-btn">刷新重跑</button>
+      </div>
+      <div id="out"></div>
     </div>
   </div>
 
@@ -635,6 +661,30 @@
 
     // ====== 启动 ======
     loadManifest();
+
+    // ====== AI 辅助快捷按钮：查看最近 spawn 的 PID / 日志，刷新重跑 ======
+    document.getElementById('btn-log').addEventListener('click', function() {
+      var sp = window.__lastSpawn;
+      if (!sp || !window.runCommand) {
+        appendOutput('还没有可用的 PID/日志，请先执行一次获取 Root。');
+        return;
+      }
+      appendOutput('PID=' + sp.pid + '  LOG=' + sp.log);
+      var r = window.runCommand('/system/bin/kill -0 ' + sp.pid + ' 2>/dev/null; echo alive=$?; tail -80 ' + sp.log + ' 2>/dev/null');
+      appendOutput(r.output || '(无输出)');
+    });
+    document.getElementById('btn-proc').addEventListener('click', function() {
+      var sp = window.__lastSpawn;
+      if (!sp || !window.runCommand) {
+        appendOutput('还没有可用的 PID，请先执行一次获取 Root。');
+        return;
+      }
+      var r = window.runCommand('/system/bin/kill -0 ' + sp.pid + ' 2>/dev/null; echo alive=$?');
+      appendOutput(r.output || '(无输出)');
+    });
+    document.getElementById('btn-reload').addEventListener('click', function() {
+      location.reload();
+    });
   </script>
 </body>
 </html>

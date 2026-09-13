@@ -8,6 +8,15 @@
    "desc": "CVE-2026-43499 futex PI UAF，提权后走 KernelSU，可授权管理",
    "devices": [
     {
+     "name": "Redmi K40 (alioth) GhostLock 4.19.157-perf-g92c089fc2d37",
+     "kernel": "4.19.157-perf-g92c089fc2d37，骁龙870，Android 13",
+     "so": "so/ghostlock_alioth.so?v=2",
+     "source": "ghostlock-k40-adaptation 本地适配版",
+     "sourceUrl": "",
+     "vendor": "xiaomi",
+     "brand": "红米"
+    },
+    {
      "name": "Xiaomi 17 / 17 Pro / 17 Pro Max / 17 Ultra  ✅实测",
      "kernel": "6.12.23-android16-5-g75e9b1c7ae7c-abogki463945075-4k",
      "so": "so/ghostlock.so?v=12",

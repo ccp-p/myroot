@@ -749,16 +749,21 @@
     }
     function matchDevice(deviceName, marketName, kernelRel) {
       var kb = kernelBase(kernelRel);
-      var byKernel = window.__deviceIndex.filter(function(d) {
+      var cands = window.__deviceIndex;
+      var byCodename = deviceName ? cands.filter(function(d) {
+        return (d.name || '').toLowerCase().indexOf(deviceName.toLowerCase()) !== -1;
+      }) : [];
+      var byKernel = cands.filter(function(d) {
         return kernelBase(d.kernel) && kernelBase(d.kernel) === kb;
       });
-      var byName = window.__deviceIndex.filter(function(d) {
+      var byName = cands.filter(function(d) {
         var n = (d.name || '').toLowerCase();
-        return (deviceName && n.indexOf(deviceName.toLowerCase()) !== -1) ||
-               (marketName && n.indexOf(marketName.toLowerCase()) !== -1);
+        return marketName && n.indexOf(marketName.toLowerCase()) !== -1;
       });
+      if (byCodename.length === 1) return byCodename[0];
       if (byKernel.length === 1) return byKernel[0];
       if (byName.length === 1) return byName[0];
+      if (byCodename.length > 0) return byCodename[0];
       if (byKernel.length > 0) return byKernel[0];
       if (byName.length > 0) return byName[0];
       return null;

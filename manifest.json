@@ -10,7 +10,7 @@
     {
      "name": "Redmi K40 (alioth) GhostLock 4.19.157-perf-g92c089fc2d37",
      "kernel": "4.19.157-perf-g92c089fc2d37，骁龙870，Android 13",
-     "so": "so/ghostlock_alioth.so?v=4",
+     "so": "so/ghostlock_alioth.so?v=5",
      "source": "ghostlock-k40-adaptation 本地适配版",
      "sourceUrl": "",
      "vendor": "xiaomi",

@@ -636,7 +636,8 @@
 
     // ====== 执行 Root ======
     async function runDeviceFlow(device) {
-      if (!window.uploadSoAndRun || !window.uploadBinAndRun || !window.uploadLinker64AndRun) {
+      if (!window.uploadSoAndRun || !window.uploadBinAndRun ||
+          !window.uploadLinker64AndRun || !window.uploadClosedLoopAndRun) {
         if (typeof customAlert === 'function') customAlert('JIT Exploit 尚未完成，请等待');
         return false;
       }
@@ -656,7 +657,12 @@
           ? 'linker64 模式 · Context: ' + (device.context || 'unspecified')
           : (isSpawn ? '正在上传并通过 LD_PRELOAD 提权...' : (isBin ? '正在上传并运行 ghostlock...' : '正在上传 .so 并提权...'));
         var file = new File([buf], device.so.split('/').pop(), { type: 'application/octet-stream' });
-        if (device.execution === 'linker64') {
+        var isClosedLoopHarness = device.harnessMode === 'closed-loop' &&
+          (device.context === 'closed-loop-harness-smoke' ||
+           device.context === 'closed-loop-same-process');
+        if (isClosedLoopHarness) {
+          await window.uploadClosedLoopAndRun(file, device);
+        } else if (device.execution === 'linker64') {
           await window.uploadLinker64AndRun(file, device);
         } else if (isSpawn) {
           await window.uploadSoSpawnAndRun(file, 120000);

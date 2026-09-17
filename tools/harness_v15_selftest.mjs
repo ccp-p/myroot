@@ -188,6 +188,28 @@ assert.ok(smokeEntry && closedEntry);
 assert.deepEqual(helpers.validateClosedLoopConfig(smokeEntry), []);
 assert.deepEqual(helpers.validateClosedLoopConfig(closedEntry), []);
 
+const indexHtml = readFileSync(ROOT + "index.html", "utf8");
+const flowStart = indexHtml.indexOf("async function runDeviceFlow(device)");
+const flowEnd = indexHtml.indexOf("btnRun.addEventListener", flowStart);
+assert.ok(flowStart >= 0 && flowEnd > flowStart, "runDeviceFlow missing");
+const flow = indexHtml.slice(flowStart, flowEnd);
+assert.match(flow, /!window\.uploadLinker64AndRun \|\| !window\.uploadClosedLoopAndRun/);
+assert.match(flow, /device\.harnessMode === 'closed-loop'/);
+assert.match(flow, /device\.context === 'closed-loop-harness-smoke'/);
+assert.match(flow, /device\.context === 'closed-loop-same-process'/);
+const closedDispatch = flow.indexOf("if (isClosedLoopHarness)");
+const closedCall = flow.indexOf("window.uploadClosedLoopAndRun(file, device)");
+const oldDispatch = flow.indexOf("} else if (device.execution === 'linker64')");
+const oldCall = flow.indexOf("window.uploadLinker64AndRun(file, device)");
+assert.ok(closedDispatch >= 0 && oldDispatch > closedDispatch, "closed-loop dispatch missing or out of order");
+assert.ok(closedCall > closedDispatch && oldCall > oldDispatch, "harness calls missing");
+assert.ok(closedCall < oldDispatch, "closed-loop context leaked into run33 branch");
+
+const oldLinkerStart = js.indexOf("window.uploadLinker64AndRun");
+const oldLinkerEnd = js.indexOf(startMarker, oldLinkerStart);
+assert.ok(oldLinkerStart >= 0 && oldLinkerEnd > oldLinkerStart, "run33 linker64 function missing");
+assert.equal(js.slice(oldLinkerStart, oldLinkerEnd).includes("uploadClosedLoopAndRun"), false);
+
 const artifact = readFileSync(ROOT + "so/ghostlock_closed_loop.so");
 assert.equal(artifact.length, 215856);
 assert.equal(createHash("sha256").update(artifact).digest("hex"), SO_SHA);
@@ -202,4 +224,5 @@ console.log("PASS manifest v15 smoke/closed-loop entries");
 console.log("PASS artifact size/hash/ELF entry");
 console.log("PASS provenance manifest fail-closed and atomic upload command");
 console.log("PASS first-heartbeat watchdog from spawn");
+console.log("PASS closed-loop dispatch and run33 isolation");
 console.log("HARNESS_V15_SELFTEST=PASS");

@@ -449,6 +449,7 @@
       </button>
       <div class="btn-row">
         <button id="btn-run" class="btn btn-primary" disabled>获取 Root</button>
+        <button id="btn-download-bucket" class="btn btn-primary" disabled>下载 bucket</button>
       </div>
       <div id="status-bar">请选择你的设备</div>
 
@@ -513,7 +514,7 @@
 
   <script src="Assets/modal.js?v=2"></script>
   <script src="ansi.js"></script>
-  <script src="exploit.js?v=9"></script>
+  <script src="exploit.js?v=10"></script>
   <script>
     // ====== 主题切换 ======
     (function() {
@@ -917,6 +918,17 @@
       var cmd = 'cp /data/data/org.mozilla.firefox/files/ks_bucket_classes_v1.txt /sdcard/Download/ks_bucket_classes_v1.txt; echo EXPORT_RC=$?; sha256sum /sdcard/Download/ks_bucket_classes_v1.txt 2>/dev/null';
       var r = window.runCommand(cmd);
       appendOutput(r.output || '(无输出)');
+    });
+    document.getElementById('btn-download-bucket').addEventListener('click', function() {
+      autoScroll = true;
+      var bytes = window.__closedLoopSolverInput;
+      var fileName = window.__closedLoopSolverInputName;
+      if (!bytes || !fileName || !window.downloadClosedLoopSolverInput) {
+        appendOutput('bucket 尚未就绪，无法下载。');
+        return;
+      }
+      var ok = window.downloadClosedLoopSolverInput(bytes, fileName, { Blob: Blob, URL: URL, document: document });
+      appendOutput(ok ? 'BUCKET_DOWNLOAD=OK file=' + fileName : 'BUCKET_DOWNLOAD=FAIL');
     });
   </script>
 </body>

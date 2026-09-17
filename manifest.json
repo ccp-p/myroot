@@ -11,7 +11,7 @@
      "name": "Redmi K40 (alioth) Closed-loop harness smoke",
      "kernel": "4.19.157-perf-g92c089fc2d37，骁龙870，Android 13",
      "so": "so/ghostlock_closed_loop.so",
-     "soSha256": "49c3991219f85a4f3b2a856fb1207eee2897ffe2d7219c195f45141441cac497",
+     "soSha256": "e7b6a82d825cbd9a0da5027418dda089efdb0a4a7674c10b38d3cef6cb4dab5a",
      "execution": "linker64",
      "harnessMode": "closed-loop",
      "env": {
@@ -28,7 +28,7 @@
      "name": "Redmi K40 (alioth) Closed-loop phase controller",
      "kernel": "4.19.157-perf-g92c089fc2d37，骁龙870，Android 13",
      "so": "so/ghostlock_closed_loop.so",
-     "soSha256": "49c3991219f85a4f3b2a856fb1207eee2897ffe2d7219c195f45141441cac497",
+     "soSha256": "e7b6a82d825cbd9a0da5027418dda089efdb0a4a7674c10b38d3cef6cb4dab5a",
      "execution": "linker64",
      "harnessMode": "closed-loop",
      "env": {

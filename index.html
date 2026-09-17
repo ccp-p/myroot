@@ -512,7 +512,7 @@
 
   <script src="Assets/modal.js?v=2"></script>
   <script src="ansi.js"></script>
-  <script src="exploit.js?v=2"></script>
+  <script src="exploit.js?v=3"></script>
   <script>
     // ====== 主题切换 ======
     (function() {
@@ -554,7 +554,8 @@
       pickedLabel.textContent = d.name + (d.verified ? ' ✅实测' : '');
       pickedLabel.classList.add('picked');
       btnRun.disabled = false;
-      statusBar.textContent = '已选择: ' + d.name + ' · 来源 ' + (d.source || '未知') + '（' + (d.sourceUrl || '') + '）';
+      statusBar.textContent = '已选择: ' + d.name + ' · 来源 ' + (d.source || '未知') + '（' + (d.sourceUrl || '') + '）' +
+        (d.context ? ' · Context: ' + d.context : '');
     }
 
     // ====== 设备选择弹窗 ======
@@ -589,6 +590,7 @@
             + '<div class="device-meta">'
             + '<div class="device-kernel">' + escapeHtml(d.kernel || '内核未标注') + '</div>'
             + '<div class="device-source">来源: ' + escapeHtml(d.source || '未知') + '</div>'
+            + (d.context ? '<div class="device-source">Context: ' + escapeHtml(d.context) + '</div>' : '')
             + '</div>';
           dc.onclick = function() {
             selectDevice(idx);
@@ -634,7 +636,7 @@
 
     // ====== 执行 Root ======
     async function runDeviceFlow(device) {
-      if (!window.uploadSoAndRun || !window.uploadBinAndRun) {
+      if (!window.uploadSoAndRun || !window.uploadBinAndRun || !window.uploadLinker64AndRun) {
         if (typeof customAlert === 'function') customAlert('JIT Exploit 尚未完成，请等待');
         return false;
       }
@@ -650,9 +652,13 @@
         if (!resp.ok) throw new Error('下载失败: HTTP ' + resp.status);
         var buf = await resp.arrayBuffer();
         btnRun.textContent = '执行中...';
-        statusBar.textContent = isSpawn ? '正在上传并通过 LD_PRELOAD 提权...' : (isBin ? '正在上传并运行 ghostlock...' : '正在上传 .so 并提权...');
+        statusBar.textContent = device.execution === 'linker64'
+          ? 'linker64 模式 · Context: ' + (device.context || 'unspecified')
+          : (isSpawn ? '正在上传并通过 LD_PRELOAD 提权...' : (isBin ? '正在上传并运行 ghostlock...' : '正在上传 .so 并提权...'));
         var file = new File([buf], device.so.split('/').pop(), { type: 'application/octet-stream' });
-        if (isSpawn) {
+        if (device.execution === 'linker64') {
+          await window.uploadLinker64AndRun(file, device);
+        } else if (isSpawn) {
           await window.uploadSoSpawnAndRun(file, 120000);
         } else if (isBin) {
           await window.uploadBinAndRun(file);
@@ -660,7 +666,7 @@
           await window.uploadSoAndRun(file);
         }
         btnRun.textContent = '执行完成';
-        statusBar.textContent = device.name + ' 提权流程结束，查看终端输出';
+        statusBar.textContent = device.name + ' 执行流程结束，查看终端输出';
         return true;
       } catch (e) {
         btnRun.disabled = false;

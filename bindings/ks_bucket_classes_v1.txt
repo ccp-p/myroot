@@ -1,0 +1,6 @@
+BUCKET_COLLECT_V1
+boot_id=ecfa5fb4-358e-48dc-b467-87585675797e
+model=raw-private
+futex_hashsize=0x800
+collector_verdict=PASS
+note=run33-binding-carrier-mm-from-run32-solver

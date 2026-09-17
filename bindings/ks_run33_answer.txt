@@ -1,0 +1,9 @@
+BUCKET_ANSWER_V1
+answer=0xffffffc51bc66cc0
+boot_id=ecfa5fb4-358e-48dc-b467-87585675797e
+model=raw-private
+futex_hashsize=0x800
+bucket_file_sha256=bde65832726a29447bde8ef94a1558cb83609cbe3716239a1886763981d2fabc
+candidates=1
+ambiguous=0
+answer_verdict=UNIQUE

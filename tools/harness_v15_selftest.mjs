@@ -42,7 +42,7 @@ const helpers = new Function(
 )();
 
 const PRIVATE = "/data/data/org.mozilla.firefox/files";
-const SO_SHA = "e7b6a82d825cbd9a0da5027418dda089efdb0a4a7674c10b38d3cef6cb4dab5a";
+const SO_SHA = "7b0bfbdcc6d387bb063ba68870d6de3ab26e1daad9ea78b70bee5c44b7153cd8";
 const closedEnv = {
   KS_MMLOOP_MODE: "closed-loop",
   KS_BUCKET_FILE: PRIVATE + "/ks_bucket_classes_v1.txt",
@@ -151,23 +151,23 @@ assert.deepEqual(helpers.closedLoopCleanupPaths(closedEnv).length, 12);
 
 const provenance = helpers.formatClosedLoopProvenanceManifest();
 assert.equal(helpers.validateClosedLoopProvenanceManifest(provenance).length, 0);
-assert.equal(provenance, "size=214424\nsha256=" + SO_SHA + "\nentry=0x2D1B0\n");
-assert.deepEqual(helpers.validateClosedLoopProvenanceManifest(provenance.replace("0x2D1B0", "0x25950")), ["manifest line 3 mismatch"]);
+assert.equal(provenance, "size=214408\nsha256=" + SO_SHA + "\nentry=0x2D1A0\n");
+assert.deepEqual(helpers.validateClosedLoopProvenanceManifest(provenance.replace("0x2D1A0", "0x25950")), ["manifest line 3 mismatch"]);
 assert.deepEqual(
   helpers.validateClosedLoopProvenanceManifest(provenance.replace(SO_SHA, "9".repeat(64))),
   ["manifest line 2 mismatch"]
 );
-assert.deepEqual(helpers.validateClosedLoopProvenanceManifest(provenance.replace("214424", "177936")), ["manifest line 1 mismatch"]);
+assert.deepEqual(helpers.validateClosedLoopProvenanceManifest(provenance.replace("214408", "177936")), ["manifest line 1 mismatch"]);
 assert.deepEqual(helpers.validateClosedLoopProvenanceManifest(provenance + "extra=x\n"), ["manifest must have exactly 3 lines"]);
 
 const manifestSha = createHash("sha256").update(provenance).digest("hex");
 const manifestCommand = helpers.closedLoopProvenanceUploadCommand(closedEnv, provenance, manifestSha);
-assert.throws(() => helpers.closedLoopProvenanceUploadCommand(closedEnv, provenance.replace("0x2D1B0", "0x25950"), manifestSha));
+assert.throws(() => helpers.closedLoopProvenanceUploadCommand(closedEnv, provenance.replace("0x2D1A0", "0x25950"), manifestSha));
 assert.throws(() => helpers.closedLoopProvenanceUploadCommand(closedEnv, provenance.replace(SO_SHA, "9".repeat(64)), manifestSha));
-assert.throws(() => helpers.closedLoopProvenanceUploadCommand(closedEnv, provenance.replace("214424", "177936"), manifestSha));
+assert.throws(() => helpers.closedLoopProvenanceUploadCommand(closedEnv, provenance.replace("214408", "177936"), manifestSha));
 assert.match(manifestCommand, /target='\/data\/data\/org\.mozilla\.firefox\/files\/ks_rootchain_manifest\.txt'/);
 assert.match(manifestCommand, /tmp='\/data\/data\/org\.mozilla\.firefox\/files\/ks_rootchain_manifest\.txt\.tmp'/);
-assert.match(manifestCommand, /\/system\/bin\/printf '%s\\n' 'size=214424'/);
+assert.match(manifestCommand, /\/system\/bin\/printf '%s\\n' 'size=214408'/);
 assert.match(manifestCommand, /sha256sum "\$tmp"/);
 assert.match(manifestCommand, /\/system\/bin\/mv -f "\$tmp" "\$target"/);
 assert.match(manifestCommand, /KS_MANIFEST_UPLOAD=OK/);
@@ -256,9 +256,9 @@ assert.ok(oldLinkerStart >= 0 && oldLinkerEnd > oldLinkerStart, "run33 linker64 
 assert.equal(js.slice(oldLinkerStart, oldLinkerEnd).includes("uploadClosedLoopAndRun"), false);
 
 const artifact = readFileSync(ROOT + "so/ghostlock_closed_loop.so");
-assert.equal(artifact.length, 214424);
+assert.equal(artifact.length, 214408);
 assert.equal(createHash("sha256").update(artifact).digest("hex"), SO_SHA);
-assert.equal(artifact.readBigUInt64LE(24).toString(16).toUpperCase(), "2D1B0");
+assert.equal(artifact.readBigUInt64LE(24).toString(16).toUpperCase(), "2D1A0");
 
 console.log("PASS config separation");
 console.log("PASS env whitelist");

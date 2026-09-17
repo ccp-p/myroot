@@ -1,5 +1,5 @@
 {
- "version": 14,
+ "version": 15,
  "note": "自用设备列表；分组显示，GhostLock 组优先",
  "groups": [
   {
@@ -42,6 +42,48 @@
      "context": "harness-smoke-mismatch",
      "expectedVerdict": "FAIL",
      "source": "run32 candidate cross-process harness smoke",
+     "sourceUrl": "",
+     "vendor": "xiaomi",
+     "brand": "红米"
+    },
+    {
+     "name": "Redmi K40 (alioth) Closed-loop harness smoke",
+     "kernel": "4.19.157-perf-g92c089fc2d37，骁龙870，Android 13",
+     "so": "so/ghostlock_closed_loop.so",
+     "soSha256": "6b1a84390dd81e7d820678b5bf1ed8e090314f21da80a6611ac7d1abcac4c5a9",
+     "execution": "linker64",
+     "harnessMode": "closed-loop",
+     "env": {
+      "KS_MMLOOP_MODE": "smoke"
+     },
+     "context": "closed-loop-harness-smoke",
+     "expectedMarkers": ["MMLOOP smoke marker=complete phase=SPAWN"],
+     "source": "closed-loop phase controller harness smoke",
+     "sourceUrl": "",
+     "vendor": "xiaomi",
+     "brand": "红米"
+    },
+    {
+     "name": "Redmi K40 (alioth) Closed-loop phase controller",
+     "kernel": "4.19.157-perf-g92c089fc2d37，骁龙870，Android 13",
+     "so": "so/ghostlock_closed_loop.so",
+     "soSha256": "6b1a84390dd81e7d820678b5bf1ed8e090314f21da80a6611ac7d1abcac4c5a9",
+     "execution": "linker64",
+     "harnessMode": "closed-loop",
+     "env": {
+      "KS_MMLOOP_MODE": "closed-loop",
+      "KS_BUCKET_FILE": "/data/data/org.mozilla.firefox/files/ks_bucket_classes_v1.txt",
+      "KS_BUCKET_ANSWER": "/data/data/org.mozilla.firefox/files/ks_bucket_answer.txt",
+      "ROOTCHAIN_MM_PATH": "/data/data/org.mozilla.firefox/files/ks_rootchain_mm.txt",
+      "ROOTCHAIN_MM_BOOT_ID_PATH": "/data/data/org.mozilla.firefox/files/ks_rootchain_mm_boot_id.txt",
+      "ROOTCHAIN_RUN22_GATE_PATH": "/data/data/org.mozilla.firefox/files/ks_rootchain_run22_gate.txt",
+      "ROOTCHAIN_MANIFEST_PATH": "/data/data/org.mozilla.firefox/files/ks_rootchain_manifest.txt",
+      "ROOTCHAIN_ARTIFACT_PATH": "/data/data/org.mozilla.firefox/files/res"
+     },
+     "context": "closed-loop-same-process",
+     "expectedMarkers": ["MMLOOP export sha256=", "MMLOOP phase=COLLECT PASS bucket_sha256=", "ROOTCHAIN verdict="],
+     "answerRequired": true,
+     "source": "closed-loop DSO provenance entry 0x2D538",
      "sourceUrl": "",
      "vendor": "xiaomi",
      "brand": "红米"

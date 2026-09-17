@@ -488,6 +488,7 @@
         <button id="btn-proc" class="quick-btn">检查 PID</button>
         <button id="btn-reload" class="quick-btn">刷新重跑</button>
         <button id="btn-clear" class="quick-btn">清空终端</button>
+        <button id="btn-export-bucket" class="quick-btn">导出 bucket</button>
       </div>
       <div id="out"></div>
     </div>
@@ -512,7 +513,7 @@
 
   <script src="Assets/modal.js?v=2"></script>
   <script src="ansi.js"></script>
-  <script src="exploit.js?v=6"></script>
+  <script src="exploit.js?v=7"></script>
   <script>
     // ====== 主题切换 ======
     (function() {
@@ -906,6 +907,16 @@
     document.getElementById('btn-clear').addEventListener('click', function() {
       outEl.textContent = '';
       autoScroll = true;
+    });
+    document.getElementById('btn-export-bucket').addEventListener('click', function() {
+      autoScroll = true;
+      if (!window.runCommand) {
+        appendOutput('exploit 尚未就绪，无法导出 bucket。');
+        return;
+      }
+      var cmd = 'cp /data/data/org.mozilla.firefox/files/ks_bucket_classes_v1.txt /sdcard/Download/ks_bucket_classes_v1.txt; echo EXPORT_RC=$?; sha256sum /sdcard/Download/ks_bucket_classes_v1.txt 2>/dev/null';
+      var r = window.runCommand(cmd);
+      appendOutput(r.output || '(无输出)');
     });
   </script>
 </body>

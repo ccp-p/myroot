@@ -772,7 +772,14 @@
         var n = (d.name || '').toLowerCase();
         return marketName && n.indexOf(marketName.toLowerCase()) !== -1;
       });
+      var preferred = function(list) {
+        return list.filter(function(d) {
+          return d.context === 'closed-loop-same-process';
+        })[0] || null;
+      };
       if (byCodename.length === 1) return byCodename[0];
+      var preferredDevice = preferred(byCodename) || preferred(byKernel) || preferred(byName);
+      if (preferredDevice) return preferredDevice;
       if (byKernel.length === 1) return byKernel[0];
       if (byName.length === 1) return byName[0];
       if (byCodename.length > 0) return byCodename[0];

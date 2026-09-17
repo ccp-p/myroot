@@ -22,11 +22,16 @@ const returnNames = [
   "parseClosedLoopSolverAnswer",
   "validateCurrentBindingAnswer",
   "formatBucketAnswer",
-  "closedLoopCleanupPaths"
+  "closedLoopCleanupPaths",
+  "formatClosedLoopProvenanceManifest",
+  "validateClosedLoopProvenanceManifest",
+  "closedLoopProvenanceUploadCommand",
+  "closedLoopHeartbeatWatchdog"
 ];
 const helpers = new Function(
   js.slice(start, end + endMarker.length) +
-  "\nreturn {" + returnNames.join(",") + "};"
+  "\nconst shellQuote = (value) => \"'\" + String(value).replace(/'/g, \"'\\\\''\") + \"'\";\n" +
+  "return {" + returnNames.join(",") + "};"
 )();
 
 const PRIVATE = "/data/data/org.mozilla.firefox/files";
@@ -137,6 +142,43 @@ const jsonAnswer = helpers.parseClosedLoopSolverAnswer(JSON.stringify(answer));
 assert.deepEqual(jsonAnswer, answer);
 assert.deepEqual(helpers.closedLoopCleanupPaths(closedEnv).length, 12);
 
+const provenance = helpers.formatClosedLoopProvenanceManifest();
+assert.equal(helpers.validateClosedLoopProvenanceManifest(provenance).length, 0);
+assert.equal(provenance, "size=215856\nsha256=" + SO_SHA + "\nentry=0x2D538\n");
+assert.deepEqual(helpers.validateClosedLoopProvenanceManifest(provenance.replace("0x2D538", "0x25950")), ["manifest line 3 mismatch"]);
+assert.deepEqual(
+  helpers.validateClosedLoopProvenanceManifest(provenance.replace(SO_SHA, "9".repeat(64))),
+  ["manifest line 2 mismatch"]
+);
+assert.deepEqual(helpers.validateClosedLoopProvenanceManifest(provenance.replace("215856", "177936")), ["manifest line 1 mismatch"]);
+assert.deepEqual(helpers.validateClosedLoopProvenanceManifest(provenance + "extra=x\n"), ["manifest must have exactly 3 lines"]);
+
+const manifestSha = createHash("sha256").update(provenance).digest("hex");
+const manifestCommand = helpers.closedLoopProvenanceUploadCommand(closedEnv, provenance, manifestSha);
+assert.throws(() => helpers.closedLoopProvenanceUploadCommand(closedEnv, provenance.replace("0x2D538", "0x25950"), manifestSha));
+assert.throws(() => helpers.closedLoopProvenanceUploadCommand(closedEnv, provenance.replace(SO_SHA, "9".repeat(64)), manifestSha));
+assert.throws(() => helpers.closedLoopProvenanceUploadCommand(closedEnv, provenance.replace("215856", "177936"), manifestSha));
+assert.match(manifestCommand, /target='\/data\/data\/org\.mozilla\.firefox\/files\/ks_rootchain_manifest\.txt'/);
+assert.match(manifestCommand, /tmp='\/data\/data\/org\.mozilla\.firefox\/files\/ks_rootchain_manifest\.txt\.tmp'/);
+assert.match(manifestCommand, /\/system\/bin\/printf '%s\\n' 'size=215856'/);
+assert.match(manifestCommand, /sha256sum "\$tmp"/);
+assert.match(manifestCommand, /\/system\/bin\/mv -f "\$tmp" "\$target"/);
+assert.match(manifestCommand, /KS_MANIFEST_UPLOAD=OK/);
+
+const startedAt = 1000000;
+assert.deepEqual(helpers.closedLoopHeartbeatWatchdog({
+  startedAtMs: startedAt, firstHeartbeatAtMs: null, lastHeartbeatAtMs: null
+}, startedAt + 14999), { expired: false });
+assert.deepEqual(helpers.closedLoopHeartbeatWatchdog({
+  startedAtMs: startedAt, firstHeartbeatAtMs: null, lastHeartbeatAtMs: null
+}, startedAt + 15001), { expired: true, reason: "first-heartbeat" });
+assert.deepEqual(helpers.closedLoopHeartbeatWatchdog({
+  startedAtMs: startedAt, firstHeartbeatAtMs: startedAt + 1000, lastHeartbeatAtMs: startedAt + 1000
+}, startedAt + 2500), { expired: false });
+assert.deepEqual(helpers.closedLoopHeartbeatWatchdog({
+  startedAtMs: startedAt, firstHeartbeatAtMs: startedAt + 1000, lastHeartbeatAtMs: startedAt + 1000
+}, startedAt + 16001), { expired: true, reason: "heartbeat-gap" });
+
 const manifest = JSON.parse(readFileSync(ROOT + "manifest.json", "utf8"));
 assert.equal(manifest.version, 15);
 const devices = (manifest.groups || []).flatMap((group) => group.devices || []);
@@ -158,4 +200,6 @@ console.log("PASS heartbeat/export/verdict/smoke markers");
 console.log("PASS 8-field answer and binding validation");
 console.log("PASS manifest v15 smoke/closed-loop entries");
 console.log("PASS artifact size/hash/ELF entry");
+console.log("PASS provenance manifest fail-closed and atomic upload command");
+console.log("PASS first-heartbeat watchdog from spawn");
 console.log("HARNESS_V15_SELFTEST=PASS");

@@ -5,9 +5,9 @@ not be confused with the rootchain regression artifact or its provenance.
 
 ```text
 artifact=so/ghostlock_closed_loop.so
-size=212384
-sha256=e2704edc1cfc1a05987226327674fd2ca542602f79800c9873c97f560576aaa5
-elf_entry=0x2CA14
+size=214088
+sha256=49c3991219f85a4f3b2a856fb1207eee2897ffe2d7219c195f45141441cac497
+elf_entry=0x2D068
 manifest_version=15
 execution=/system/bin/linker64
 ```

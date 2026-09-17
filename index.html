@@ -512,7 +512,7 @@
 
   <script src="Assets/modal.js?v=2"></script>
   <script src="ansi.js"></script>
-  <script src="exploit.js?v=5"></script>
+  <script src="exploit.js?v=6"></script>
   <script>
     // ====== 主题切换 ======
     (function() {
@@ -554,7 +554,10 @@
       pickedLabel.textContent = d.name + (d.verified ? ' ✅实测' : '');
       pickedLabel.classList.add('picked');
       btnRun.disabled = false;
-      statusBar.textContent = '已选择: ' + d.name + ' · 来源 ' + (d.source || '未知') + '（' + (d.sourceUrl || '') + '）' +
+      statusBar.textContent = '已选择: ' + d.name +
+        (d.soSha256 ? ' · sha256=' + d.soSha256 : '') +
+        (d.soEntry ? ' · entry=' + d.soEntry : '') +
+        (d.soSize ? ' · size=' + d.soSize : '') +
         (d.context ? ' · Context: ' + d.context : '');
     }
 
@@ -619,12 +622,15 @@
         const groups = manifest.groups || [];
         window.__deviceIndex = [];
         groups.forEach(function(g) {
-          (g.devices || []).forEach(function(d) { window.__deviceIndex.push(d); });
+          (g.devices || []).forEach(function(d) {
+            if (d.context === 'closed-loop-same-process') window.__deviceIndex.push(d);
+          });
         });
         if (window.__deviceIndex.length === 0) throw new Error('设备列表为空');
         document.getElementById('btn-pick-device').disabled = false;
-        manifestStatus.textContent = '已加载 ' + window.__deviceIndex.length + ' 个设备';
+        manifestStatus.textContent = '已锁定 ' + window.__deviceIndex.length + ' 个最新入口';
         manifestStatus.className = 'badge badge-ok';
+        selectDevice(0);
       } catch (e) {
         manifestStatus.textContent = '加载失败';
         manifestStatus.className = 'badge badge-fail';

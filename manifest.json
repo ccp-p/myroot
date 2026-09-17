@@ -12,6 +12,8 @@
      "kernel": "4.19.157-perf-g92c089fc2d37，骁龙870，Android 13",
      "so": "so/ghostlock_closed_loop.so",
      "soSha256": "7b0bfbdcc6d387bb063ba68870d6de3ab26e1daad9ea78b70bee5c44b7153cd8",
+     "soSize": 214408,
+     "soEntry": "0x2D1A0",
      "execution": "linker64",
      "harnessMode": "closed-loop",
      "env": {

@@ -8,49 +8,10 @@
    "desc": "CVE-2026-43499 futex PI UAF，提权后走 KernelSU，可授权管理",
    "devices": [
     {
-     "name": "Redmi K40 (alioth) GhostLock 4.19.157-perf-g92c089fc2d37",
-     "kernel": "4.19.157-perf-g92c089fc2d37，骁龙870，Android 13",
-     "so": "so/ghostlock_alioth_v15.so",
-     "source": "ghostlock-k40-adaptation 本地适配版",
-     "sourceUrl": "",
-     "vendor": "xiaomi",
-     "brand": "红米"
-    },
-    {
-     "name": "Redmi K40 (alioth) Run33 harness smoke",
-     "kernel": "4.19.157-perf-g92c089fc2d37，骁龙870，Android 13",
-     "so": "so/preload_run33_validation.so",
-     "soSha256": "c33170f76792cfe7532ceb426f4599ad84939efbecaf8fd8c1337ea5d28eb4ef",
-     "execution": "linker64",
-     "env": {
-      "KS_RUN33_VALIDATION": "1",
-      "KS_BUCKET_ANSWER": "/data/data/org.mozilla.firefox/files/ks_run33_answer.txt",
-      "KS_BUCKET_FILE": "/data/data/org.mozilla.firefox/files/ks_bucket_classes_v1.txt"
-     },
-     "auxFiles": [
-      {
-       "url": "bindings/ks_bucket_classes_v1.txt",
-       "target": "ks_bucket_classes_v1.txt",
-       "sha256": "bde65832726a29447bde8ef94a1558cb83609cbe3716239a1886763981d2fabc"
-      },
-      {
-       "url": "bindings/ks_run33_answer.txt",
-       "target": "ks_run33_answer.txt",
-       "sha256": "9e0cf871582bfb914aba1c3ce25323e8ac80e026750033892879990fd0613d46"
-      }
-     ],
-     "context": "harness-smoke-mismatch",
-     "expectedVerdict": "FAIL",
-     "source": "run32 candidate cross-process harness smoke",
-     "sourceUrl": "",
-     "vendor": "xiaomi",
-     "brand": "红米"
-    },
-    {
      "name": "Redmi K40 (alioth) Closed-loop harness smoke",
      "kernel": "4.19.157-perf-g92c089fc2d37，骁龙870，Android 13",
      "so": "so/ghostlock_closed_loop.so",
-     "soSha256": "9df6623e2dec606f74f10fc76e8f69e5206ca0ccc9306410ad351c7fe3e442d6",
+     "soSha256": "e2704edc1cfc1a05987226327674fd2ca542602f79800c9873c97f560576aaa5",
      "execution": "linker64",
      "harnessMode": "closed-loop",
      "env": {
@@ -67,7 +28,7 @@
      "name": "Redmi K40 (alioth) Closed-loop phase controller",
      "kernel": "4.19.157-perf-g92c089fc2d37，骁龙870，Android 13",
      "so": "so/ghostlock_closed_loop.so",
-     "soSha256": "9df6623e2dec606f74f10fc76e8f69e5206ca0ccc9306410ad351c7fe3e442d6",
+     "soSha256": "e2704edc1cfc1a05987226327674fd2ca542602f79800c9873c97f560576aaa5",
      "execution": "linker64",
      "harnessMode": "closed-loop",
      "env": {
@@ -83,7 +44,7 @@
      "context": "closed-loop-same-process",
      "expectedMarkers": ["MMLOOP export sha256=", "MMLOOP phase=COLLECT PASS bucket_sha256=", "ROOTCHAIN verdict="],
      "answerRequired": true,
-     "source": "closed-loop DSO provenance entry 0x2C930",
+     "source": "closed-loop DSO provenance entry 0x2CA14",
      "sourceUrl": "",
      "vendor": "xiaomi",
      "brand": "红米"

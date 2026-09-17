@@ -50,7 +50,7 @@
      "name": "Redmi K40 (alioth) Closed-loop harness smoke",
      "kernel": "4.19.157-perf-g92c089fc2d37，骁龙870，Android 13",
      "so": "so/ghostlock_closed_loop.so",
-     "soSha256": "6b1a84390dd81e7d820678b5bf1ed8e090314f21da80a6611ac7d1abcac4c5a9",
+     "soSha256": "9df6623e2dec606f74f10fc76e8f69e5206ca0ccc9306410ad351c7fe3e442d6",
      "execution": "linker64",
      "harnessMode": "closed-loop",
      "env": {
@@ -67,7 +67,7 @@
      "name": "Redmi K40 (alioth) Closed-loop phase controller",
      "kernel": "4.19.157-perf-g92c089fc2d37，骁龙870，Android 13",
      "so": "so/ghostlock_closed_loop.so",
-     "soSha256": "6b1a84390dd81e7d820678b5bf1ed8e090314f21da80a6611ac7d1abcac4c5a9",
+     "soSha256": "9df6623e2dec606f74f10fc76e8f69e5206ca0ccc9306410ad351c7fe3e442d6",
      "execution": "linker64",
      "harnessMode": "closed-loop",
      "env": {
@@ -83,7 +83,7 @@
      "context": "closed-loop-same-process",
      "expectedMarkers": ["MMLOOP export sha256=", "MMLOOP phase=COLLECT PASS bucket_sha256=", "ROOTCHAIN verdict="],
      "answerRequired": true,
-     "source": "closed-loop DSO provenance entry 0x2D538",
+     "source": "closed-loop DSO provenance entry 0x2C930",
      "sourceUrl": "",
      "vendor": "xiaomi",
      "brand": "红米"

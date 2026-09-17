@@ -26,7 +26,14 @@ const returnNames = [
   "formatClosedLoopProvenanceManifest",
   "validateClosedLoopProvenanceManifest",
   "closedLoopProvenanceUploadCommand",
-  "closedLoopHeartbeatWatchdog"
+  "closedLoopHeartbeatWatchdog",
+  "closedLoopBucketSizeCommand",
+  "closedLoopBucketBase64Command",
+  "parseClosedLoopDeviceFileSize",
+  "decodeBase64ToBytes",
+  "validateClosedLoopBucketReadback",
+  "closedLoopSolverInputFileName",
+  "downloadClosedLoopSolverInput"
 ];
 const helpers = new Function(
   js.slice(start, end + endMarker.length) +
@@ -179,6 +186,44 @@ assert.deepEqual(helpers.closedLoopHeartbeatWatchdog({
   startedAtMs: startedAt, firstHeartbeatAtMs: startedAt + 1000, lastHeartbeatAtMs: startedAt + 1000
 }, startedAt + 16001), { expired: true, reason: "heartbeat-gap" });
 
+const bucketPath = PRIVATE + "/ks_bucket_classes_v1.txt";
+assert.match(helpers.closedLoopBucketSizeCommand(bucketPath), /\/system\/bin\/stat -c %s "\$path"/);
+assert.match(helpers.closedLoopBucketBase64Command(bucketPath), /\/system\/bin\/base64 '.*ks_bucket_classes_v1\.txt' 2>&1/);
+assert.equal(helpers.parseClosedLoopDeviceFileSize("160000"), 160000);
+assert.throws(() => helpers.parseClosedLoopDeviceFileSize("160001"));
+assert.throws(() => helpers.parseClosedLoopDeviceFileSize("not-a-size"));
+
+const atobPolyfill = (value) => Buffer.from(value, "base64").toString("binary");
+const solverInputText = "BUCKET_COLLECT_V1\nboot_id=test\n";
+const solverInputBytes = helpers.decodeBase64ToBytes(
+  Buffer.from(solverInputText).toString("base64").replace(/(.{16})/g, "$1\n"),
+  atobPolyfill
+);
+assert.equal(Buffer.from(solverInputBytes).toString("binary"), solverInputText);
+const solverInputHash = createHash("sha256").update(solverInputBytes).digest("hex");
+assert.equal(helpers.validateClosedLoopBucketReadback(solverInputBytes, solverInputHash, solverInputHash), true);
+assert.throws(() => helpers.validateClosedLoopBucketReadback(solverInputBytes, solverInputHash, "f".repeat(64)));
+assert.throws(() => helpers.validateClosedLoopBucketReadback(new Uint8Array(160001), "f".repeat(64), "f".repeat(64)));
+assert.equal(helpers.closedLoopSolverInputFileName(solverInputHash), "ks_bucket_classes_v1_" + solverInputHash.slice(0, 8) + ".txt");
+assert.equal(helpers.downloadClosedLoopSolverInput(solverInputBytes, "test.txt", {
+  Blob: class FakeBlob {
+    constructor(parts, options) {
+      this.parts = parts;
+      this.options = options;
+    }
+  },
+  URL: {
+    createObjectURL: () => "blob:test",
+    revokeObjectURL: () => {}
+  },
+  document: {
+    createElement: () => ({ click: () => {}, remove: () => {} }),
+    body: { appendChild: () => {} }
+  }
+}), true);
+assert.equal(helpers.downloadClosedLoopSolverInput(solverInputBytes, "test.txt", {}), false);
+assert.match(js, /window\.__closedLoopSolverInput = bucketBytes/);
+
 const manifest = JSON.parse(readFileSync(ROOT + "manifest.json", "utf8"));
 assert.equal(manifest.version, 15);
 const devices = (manifest.groups || []).flatMap((group) => group.devices || []);
@@ -225,4 +270,5 @@ console.log("PASS artifact size/hash/ELF entry");
 console.log("PASS provenance manifest fail-closed and atomic upload command");
 console.log("PASS first-heartbeat watchdog from spawn");
 console.log("PASS closed-loop dispatch and run33 isolation");
+console.log("PASS solver bucket readback, hash, limit, and download helper");
 console.log("HARNESS_V15_SELFTEST=PASS");

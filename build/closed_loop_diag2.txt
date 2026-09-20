@@ -1,0 +1,8 @@
+boot_id=fde36c53-e820-4194-9a75-032378100363
+page_failure_reason=closed-loop harness failed: heartbeat watchdog FAIL reason=heartbeat-gap; no same-boot retry
+stage_header=1 run=v15 append=1 boot_id=fde36c53-e820-4194-9a75-032378100363 uptime_ms=0
+stage=collect_bucket_enter mode=closed-loop bucket_path=/data/data/org.mozilla.firefox/files/ks_bucket_classes_v1.txt boot_id=fde36c53-e820-4194-9a75-032378100363 ks=0x0
+stage=collect_bucket_setup_done ks=0x78a16f9000 state=1
+stage=collect_bucket_collisions_ready state=2 accepted_count=31 hashsize=0x800
+stage=collect_bucket_evidence same_edges=29 accepted_count=31 hashsize=0x800 pass=0
+stage=collect_bucket_fail reason=evidence_pass false

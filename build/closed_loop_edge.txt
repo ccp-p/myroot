@@ -1,0 +1,2 @@
+boot_id=unavailable
+reason=delegation closed before runtime completion

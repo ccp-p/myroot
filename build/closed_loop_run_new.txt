@@ -1,0 +1,31 @@
+Closed-loop run postmortem
+
+boot_id=23f02d28-afd6-4ad0-b2b7-08958bf80882
+
+Page terminal markers observed:
+- MMLOOP export sha256=: absent
+- SOLVER_INPUT_DOWNLOAD=OK: absent
+- ROOTCHAIN verdict=: absent
+- Failure reason: [FAIL] closed-loop harness failed: heartbeat watchdog FAIL reason=heartbeat-gap; no same-boot retry
+
+Visible page terminal tail:
+[*] target       000000798a401000 page=30/128
+[*] KS_V15_PILE event=created addr=000000798a401000 created=256 active=256 pile_created=63 pile_failed=0 queued=16128 drained=15872
+[FAIL] closed-loop harness failed: heartbeat watchdog FAIL reason=heartbeat-gap; no same-boot retry
+
+Partial artifacts pulled from /data/local/tmp:
+- /data/local/tmp/ks_stage_partial.txt -> myroot/build/ks_stage_partial.txt
+  tail: stage=discovery_candidates_done discovered=26 pages=128
+  tail: stage=validation_strict_start candidates=26
+  tail: stage=validation_strict_done survivors=26 required=11
+  tail: stage=collision_accept_start discovered=26 strict=26
+  tail: stage=collision_accept_done accepted=27
+- /data/local/tmp/ks_collisions_partial.txt -> myroot/build/ks_collisions_partial.txt
+  tail: page_end=1 page_index=128/128 candidates=0 fsynced=1
+
+Bucket / answer / rootchain:
+- bucket: not reached; no MMLOOP export sha256 and no bucket download marker
+- answer: not generated or uploaded
+- rootchain: not reached; no ROOTCHAIN verdict marker
+
+Conclusion: FAIL

@@ -1,0 +1,576 @@
+partial_header=1 pages_total=128 run=v15 append=0 boot_id=241fa3a3-b4b9-44fe-a8b3-9546c95b9f87 uptime_ms=469880
+page_begin=1 page_index=1/128 page=0x0000000000001000 candidates=0 max_before=13 max_after=13 threshold=40 confirm=392
+page_end=1 page_index=1/128 candidates=0 fsynced=1
+page_begin=1 page_index=2/128 page=0x0000000000002000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=347
+page_end=1 page_index=2/128 candidates=0 fsynced=1
+page_begin=1 page_index=3/128 page=0x0000000000003000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=372
+page_end=1 page_index=3/128 candidates=0 fsynced=1
+page_begin=1 page_index=4/128 page=0x0000000000004000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=344
+page_end=1 page_index=4/128 candidates=0 fsynced=1
+page_begin=1 page_index=5/128 page=0x0000000000005000 candidates=1 max_before=151 max_after=150 threshold=40 confirm=471
+candidate_addr=0x000000796934ce94 page=0x0000000000005000 offset=0xe94 pile=initial accepted=0 t_before=151 t_after=150 page_index=5/128 target=0x0000007969348000 confirm=471
+page_end=1 page_index=5/128 candidates=1 fsynced=1
+page_begin=1 page_index=6/128 page=0x0000000000006000 candidates=0 max_before=12 max_after=11 threshold=40 confirm=346
+page_end=1 page_index=6/128 candidates=0 fsynced=1
+page_begin=1 page_index=7/128 page=0x0000000000007000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=327
+page_end=1 page_index=7/128 candidates=0 fsynced=1
+page_begin=1 page_index=8/128 page=0x0000000000008000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=386
+page_end=1 page_index=8/128 candidates=0 fsynced=1
+page_begin=1 page_index=9/128 page=0x0000000000009000 candidates=0 max_before=13 max_after=13 threshold=40 confirm=351
+page_end=1 page_index=9/128 candidates=0 fsynced=1
+page_begin=1 page_index=10/128 page=0x000000000000a000 candidates=0 max_before=10 max_after=10 threshold=40 confirm=395
+page_end=1 page_index=10/128 candidates=0 fsynced=1
+page_begin=1 page_index=11/128 page=0x000000000000b000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=332
+page_end=1 page_index=11/128 candidates=0 fsynced=1
+page_begin=1 page_index=12/128 page=0x000000000000c000 candidates=0 max_before=13 max_after=13 threshold=40 confirm=360
+page_end=1 page_index=12/128 candidates=0 fsynced=1
+page_begin=1 page_index=13/128 page=0x000000000000d000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=362
+page_end=1 page_index=13/128 candidates=0 fsynced=1
+page_begin=1 page_index=14/128 page=0x000000000000e000 candidates=1 max_before=341 max_after=342 threshold=40 confirm=388
+candidate_addr=0x00000079693553a4 page=0x000000000000e000 offset=0x3a4 pile=initial accepted=0 t_before=341 t_after=342 page_index=14/128 target=0x0000007969348000 confirm=388
+page_end=1 page_index=14/128 candidates=1 fsynced=1
+page_begin=1 page_index=15/128 page=0x000000000000f000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=433
+page_end=1 page_index=15/128 candidates=0 fsynced=1
+page_begin=1 page_index=16/128 page=0x0000000000010000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=344
+page_end=1 page_index=16/128 candidates=0 fsynced=1
+page_begin=1 page_index=17/128 page=0x0000000000011000 candidates=1 max_before=348 max_after=348 threshold=40 confirm=339
+candidate_addr=0x00000079693585c4 page=0x0000000000011000 offset=0x5c4 pile=initial accepted=0 t_before=348 t_after=348 page_index=17/128 target=0x0000007969348000 confirm=339
+page_end=1 page_index=17/128 candidates=1 fsynced=1
+page_begin=1 page_index=18/128 page=0x0000000000012000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=382
+page_end=1 page_index=18/128 candidates=0 fsynced=1
+page_begin=1 page_index=19/128 page=0x0000000000013000 candidates=1 max_before=340 max_after=339 threshold=40 confirm=318
+candidate_addr=0x000000796935a804 page=0x0000000000013000 offset=0x804 pile=initial accepted=0 t_before=340 t_after=339 page_index=19/128 target=0x0000007969348000 confirm=318
+page_end=1 page_index=19/128 candidates=1 fsynced=1
+page_begin=1 page_index=20/128 page=0x0000000000014000 candidates=0 max_before=10 max_after=10 threshold=40 confirm=355
+page_end=1 page_index=20/128 candidates=0 fsynced=1
+page_begin=1 page_index=21/128 page=0x0000000000015000 candidates=1 max_before=340 max_after=339 threshold=40 confirm=527
+candidate_addr=0x000000796935c844 page=0x0000000000015000 offset=0x844 pile=initial accepted=0 t_before=340 t_after=339 page_index=21/128 target=0x0000007969348000 confirm=527
+page_end=1 page_index=21/128 candidates=1 fsynced=1
+page_begin=1 page_index=22/128 page=0x0000000000016000 candidates=0 max_before=10 max_after=10 threshold=40 confirm=393
+page_end=1 page_index=22/128 candidates=0 fsynced=1
+page_begin=1 page_index=23/128 page=0x0000000000017000 candidates=1 max_before=344 max_after=345 threshold=40 confirm=330
+candidate_addr=0x000000796935e4d4 page=0x0000000000017000 offset=0x4d4 pile=initial accepted=0 t_before=344 t_after=345 page_index=23/128 target=0x0000007969348000 confirm=330
+page_end=1 page_index=23/128 candidates=1 fsynced=1
+page_begin=1 page_index=24/128 page=0x0000000000018000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=337
+page_end=1 page_index=24/128 candidates=0 fsynced=1
+page_begin=1 page_index=25/128 page=0x0000000000019000 candidates=3 max_before=347 max_after=347 threshold=40 confirm=333
+candidate_addr=0x0000007969360344 page=0x0000000000019000 offset=0x344 pile=initial accepted=0 t_before=347 t_after=347 page_index=25/128 target=0x0000007969348000 confirm=333
+candidate_addr=0x0000007969360614 page=0x0000000000019000 offset=0x614 pile=initial accepted=0 t_before=346 t_after=347 page_index=25/128 target=0x0000007969348000 confirm=333
+candidate_addr=0x000000796936065c page=0x0000000000019000 offset=0x65c pile=initial accepted=0 t_before=156 t_after=155 page_index=25/128 target=0x0000007969348000 confirm=333
+page_end=1 page_index=25/128 candidates=3 fsynced=1
+page_begin=1 page_index=26/128 page=0x000000000001a000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=345
+page_end=1 page_index=26/128 candidates=0 fsynced=1
+page_begin=1 page_index=27/128 page=0x000000000001b000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=411
+page_end=1 page_index=27/128 candidates=0 fsynced=1
+page_begin=1 page_index=28/128 page=0x000000000001c000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=397
+page_end=1 page_index=28/128 candidates=0 fsynced=1
+page_begin=1 page_index=29/128 page=0x000000000001d000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=376
+page_end=1 page_index=29/128 candidates=0 fsynced=1
+page_begin=1 page_index=30/128 page=0x000000000001e000 candidates=0 max_before=13 max_after=12 threshold=40 confirm=374
+page_end=1 page_index=30/128 candidates=0 fsynced=1
+page_begin=1 page_index=31/128 page=0x000000000001f000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=347
+page_end=1 page_index=31/128 candidates=0 fsynced=1
+page_begin=1 page_index=32/128 page=0x0000000000020000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=354
+page_end=1 page_index=32/128 candidates=0 fsynced=1
+page_begin=1 page_index=33/128 page=0x0000000000021000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=379
+page_end=1 page_index=33/128 candidates=0 fsynced=1
+page_begin=1 page_index=34/128 page=0x0000000000022000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=371
+page_end=1 page_index=34/128 candidates=0 fsynced=1
+page_begin=1 page_index=35/128 page=0x0000000000023000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=390
+page_end=1 page_index=35/128 candidates=0 fsynced=1
+page_begin=1 page_index=36/128 page=0x0000000000024000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=337
+page_end=1 page_index=36/128 candidates=0 fsynced=1
+page_begin=1 page_index=37/128 page=0x0000000000025000 candidates=0 max_before=10 max_after=10 threshold=40 confirm=346
+page_end=1 page_index=37/128 candidates=0 fsynced=1
+page_begin=1 page_index=38/128 page=0x0000000000026000 candidates=1 max_before=154 max_after=153 threshold=40 confirm=363
+candidate_addr=0x000000796936d40c page=0x0000000000026000 offset=0x40c pile=initial accepted=0 t_before=154 t_after=153 page_index=38/128 target=0x0000007969348000 confirm=363
+page_end=1 page_index=38/128 candidates=1 fsynced=1
+page_begin=1 page_index=39/128 page=0x0000000000027000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=378
+page_end=1 page_index=39/128 candidates=0 fsynced=1
+page_begin=1 page_index=40/128 page=0x0000000000028000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=624
+page_end=1 page_index=40/128 candidates=0 fsynced=1
+page_begin=1 page_index=41/128 page=0x0000000000029000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=363
+page_end=1 page_index=41/128 candidates=0 fsynced=1
+page_begin=1 page_index=42/128 page=0x000000000002a000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=370
+page_end=1 page_index=42/128 candidates=0 fsynced=1
+page_begin=1 page_index=43/128 page=0x000000000002b000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=400
+page_end=1 page_index=43/128 candidates=0 fsynced=1
+page_begin=1 page_index=44/128 page=0x000000000002c000 candidates=1 max_before=342 max_after=342 threshold=40 confirm=382
+candidate_addr=0x0000007969373164 page=0x000000000002c000 offset=0x164 pile=initial accepted=0 t_before=342 t_after=342 page_index=44/128 target=0x0000007969348000 confirm=382
+page_end=1 page_index=44/128 candidates=1 fsynced=1
+page_begin=1 page_index=45/128 page=0x000000000002d000 candidates=0 max_before=10 max_after=10 threshold=40 confirm=405
+page_end=1 page_index=45/128 candidates=0 fsynced=1
+page_begin=1 page_index=46/128 page=0x000000000002e000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=352
+page_end=1 page_index=46/128 candidates=0 fsynced=1
+page_begin=1 page_index=47/128 page=0x000000000002f000 candidates=0 max_before=13 max_after=13 threshold=40 confirm=448
+page_end=1 page_index=47/128 candidates=0 fsynced=1
+page_begin=1 page_index=48/128 page=0x0000000000030000 candidates=0 max_before=12 max_after=13 threshold=40 confirm=333
+page_end=1 page_index=48/128 candidates=0 fsynced=1
+page_begin=1 page_index=49/128 page=0x0000000000031000 candidates=0 max_before=13 max_after=13 threshold=40 confirm=352
+page_end=1 page_index=49/128 candidates=0 fsynced=1
+page_begin=1 page_index=50/128 page=0x0000000000032000 candidates=1 max_before=343 max_after=151 threshold=40 confirm=346
+candidate_addr=0x0000007969379294 page=0x0000000000032000 offset=0x294 pile=initial accepted=0 t_before=343 t_after=151 page_index=50/128 target=0x0000007969348000 confirm=346
+page_end=1 page_index=50/128 candidates=1 fsynced=1
+page_begin=1 page_index=51/128 page=0x0000000000033000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=366
+page_end=1 page_index=51/128 candidates=0 fsynced=1
+page_begin=1 page_index=52/128 page=0x0000000000034000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=335
+page_end=1 page_index=52/128 candidates=0 fsynced=1
+page_begin=1 page_index=53/128 page=0x0000000000035000 candidates=1 max_before=340 max_after=151 threshold=40 confirm=353
+candidate_addr=0x000000796937c2ac page=0x0000000000035000 offset=0x2ac pile=initial accepted=0 t_before=340 t_after=151 page_index=53/128 target=0x0000007969348000 confirm=353
+page_end=1 page_index=53/128 candidates=1 fsynced=1
+page_begin=1 page_index=54/128 page=0x0000000000036000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=351
+page_end=1 page_index=54/128 candidates=0 fsynced=1
+page_begin=1 page_index=55/128 page=0x0000000000037000 candidates=0 max_before=13 max_after=12 threshold=40 confirm=406
+page_end=1 page_index=55/128 candidates=0 fsynced=1
+page_begin=1 page_index=56/128 page=0x0000000000038000 candidates=0 max_before=10 max_after=10 threshold=40 confirm=324
+page_end=1 page_index=56/128 candidates=0 fsynced=1
+page_begin=1 page_index=57/128 page=0x0000000000039000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=348
+page_end=1 page_index=57/128 candidates=0 fsynced=1
+page_begin=1 page_index=58/128 page=0x000000000003a000 candidates=0 max_before=12 max_after=13 threshold=40 confirm=418
+page_end=1 page_index=58/128 candidates=0 fsynced=1
+page_begin=1 page_index=59/128 page=0x000000000003b000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=345
+page_end=1 page_index=59/128 candidates=0 fsynced=1
+page_begin=1 page_index=60/128 page=0x000000000003c000 candidates=0 max_before=11 max_after=12 threshold=40 confirm=336
+page_end=1 page_index=60/128 candidates=0 fsynced=1
+page_begin=1 page_index=61/128 page=0x000000000003d000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=423
+page_end=1 page_index=61/128 candidates=0 fsynced=1
+page_begin=1 page_index=62/128 page=0x000000000003e000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=437
+page_end=1 page_index=62/128 candidates=0 fsynced=1
+page_begin=1 page_index=63/128 page=0x000000000003f000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=448
+page_end=1 page_index=63/128 candidates=0 fsynced=1
+page_begin=1 page_index=64/128 page=0x0000000000040000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=341
+page_end=1 page_index=64/128 candidates=0 fsynced=1
+page_begin=1 page_index=65/128 page=0x0000000000041000 candidates=1 max_before=327 max_after=154 threshold=40 confirm=446
+candidate_addr=0x0000007969388994 page=0x0000000000041000 offset=0x994 pile=initial accepted=0 t_before=327 t_after=154 page_index=65/128 target=0x0000007969348000 confirm=446
+page_end=1 page_index=65/128 candidates=1 fsynced=1
+page_begin=1 page_index=66/128 page=0x0000000000042000 candidates=1 max_before=346 max_after=346 threshold=40 confirm=360
+candidate_addr=0x0000007969389744 page=0x0000000000042000 offset=0x744 pile=initial accepted=0 t_before=346 t_after=346 page_index=66/128 target=0x0000007969348000 confirm=360
+page_end=1 page_index=66/128 candidates=1 fsynced=1
+page_begin=1 page_index=67/128 page=0x0000000000043000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=342
+page_end=1 page_index=67/128 candidates=0 fsynced=1
+page_begin=1 page_index=68/128 page=0x0000000000044000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=372
+page_end=1 page_index=68/128 candidates=0 fsynced=1
+page_begin=1 page_index=69/128 page=0x0000000000045000 candidates=1 max_before=345 max_after=154 threshold=40 confirm=421
+candidate_addr=0x000000796938c0b4 page=0x0000000000045000 offset=0x0b4 pile=initial accepted=0 t_before=345 t_after=154 page_index=69/128 target=0x0000007969348000 confirm=421
+page_end=1 page_index=69/128 candidates=1 fsynced=1
+page_begin=1 page_index=70/128 page=0x0000000000046000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=389
+page_end=1 page_index=70/128 candidates=0 fsynced=1
+page_begin=1 page_index=71/128 page=0x0000000000047000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=384
+page_end=1 page_index=71/128 candidates=0 fsynced=1
+page_begin=1 page_index=72/128 page=0x0000000000048000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=350
+page_end=1 page_index=72/128 candidates=0 fsynced=1
+page_begin=1 page_index=73/128 page=0x0000000000049000 candidates=0 max_before=13 max_after=13 threshold=40 confirm=1193
+page_end=1 page_index=73/128 candidates=0 fsynced=1
+page_begin=1 page_index=74/128 page=0x000000000004a000 candidates=1 max_before=347 max_after=348 threshold=40 confirm=372
+candidate_addr=0x0000007969391fec page=0x000000000004a000 offset=0xfec pile=initial accepted=0 t_before=347 t_after=348 page_index=74/128 target=0x0000007969348000 confirm=372
+page_end=1 page_index=74/128 candidates=1 fsynced=1
+page_begin=1 page_index=75/128 page=0x000000000004b000 candidates=0 max_before=10 max_after=10 threshold=40 confirm=385
+page_end=1 page_index=75/128 candidates=0 fsynced=1
+page_begin=1 page_index=76/128 page=0x000000000004c000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=412
+page_end=1 page_index=76/128 candidates=0 fsynced=1
+page_begin=1 page_index=77/128 page=0x000000000004d000 candidates=0 max_before=12 max_after=12 threshold=40 confirm=357
+page_end=1 page_index=77/128 candidates=0 fsynced=1
+page_begin=1 page_index=78/128 page=0x000000000004e000 candidates=0 max_before=13 max_after=13 threshold=40 confirm=399
+page_end=1 page_index=78/128 candidates=0 fsynced=1
+page_begin=1 page_index=79/128 page=0x000000000004f000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=368
+page_end=1 page_index=79/128 candidates=0 fsynced=1
+page_begin=1 page_index=80/128 page=0x0000000000050000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=372
+page_end=1 page_index=80/128 candidates=0 fsynced=1
+page_begin=1 page_index=81/128 page=0x0000000000051000 candidates=1 max_before=156 max_after=155 threshold=40 confirm=366
+candidate_addr=0x0000007969398934 page=0x0000000000051000 offset=0x934 pile=initial accepted=0 t_before=156 t_after=155 page_index=81/128 target=0x0000007969348000 confirm=366
+page_end=1 page_index=81/128 candidates=1 fsynced=1
+page_begin=1 page_index=82/128 page=0x0000000000052000 candidates=1 max_before=344 max_after=344 threshold=40 confirm=356
+candidate_addr=0x00000079693999bc page=0x0000000000052000 offset=0x9bc pile=initial accepted=0 t_before=344 t_after=344 page_index=82/128 target=0x0000007969348000 confirm=356
+page_end=1 page_index=82/128 candidates=1 fsynced=1
+page_begin=1 page_index=83/128 page=0x0000000000053000 candidates=1 max_before=345 max_after=155 threshold=40 confirm=363
+candidate_addr=0x000000796939a81c page=0x0000000000053000 offset=0x81c pile=initial accepted=0 t_before=345 t_after=155 page_index=83/128 target=0x0000007969348000 confirm=363
+page_end=1 page_index=83/128 candidates=1 fsynced=1
+page_begin=1 page_index=84/128 page=0x0000000000054000 candidates=2 max_before=346 max_after=344 threshold=40 confirm=513
+candidate_addr=0x000000796939b2e4 page=0x0000000000054000 offset=0x2e4 pile=initial accepted=0 t_before=346 t_after=156 page_index=84/128 target=0x0000007969348000 confirm=513
+candidate_addr=0x000000796939b9ec page=0x0000000000054000 offset=0x9ec pile=initial accepted=0 t_before=345 t_after=344 page_index=84/128 target=0x0000007969348000 confirm=513
+page_end=1 page_index=84/128 candidates=2 fsynced=1
+page_begin=1 page_index=85/128 page=0x0000000000055000 candidates=3 max_before=341 max_after=341 threshold=40 confirm=418
+candidate_addr=0x000000796939c27c page=0x0000000000055000 offset=0x27c pile=initial accepted=0 t_before=341 t_after=341 page_index=85/128 target=0x0000007969348000 confirm=418
+candidate_addr=0x000000796939c344 page=0x0000000000055000 offset=0x344 pile=initial accepted=0 t_before=341 t_after=340 page_index=85/128 target=0x0000007969348000 confirm=418
+candidate_addr=0x000000796939c484 page=0x0000000000055000 offset=0x484 pile=initial accepted=0 t_before=341 t_after=340 page_index=85/128 target=0x0000007969348000 confirm=418
+page_end=1 page_index=85/128 candidates=3 fsynced=1
+page_begin=1 page_index=86/128 page=0x0000000000056000 candidates=1 max_before=344 max_after=153 threshold=40 confirm=352
+candidate_addr=0x000000796939d334 page=0x0000000000056000 offset=0x334 pile=initial accepted=0 t_before=344 t_after=153 page_index=86/128 target=0x0000007969348000 confirm=352
+page_end=1 page_index=86/128 candidates=1 fsynced=1
+page_begin=1 page_index=87/128 page=0x0000000000057000 candidates=0 max_before=13 max_after=12 threshold=40 confirm=409
+page_end=1 page_index=87/128 candidates=0 fsynced=1
+page_begin=1 page_index=88/128 page=0x0000000000058000 candidates=0 max_before=12 max_after=13 threshold=40 confirm=403
+page_end=1 page_index=88/128 candidates=0 fsynced=1
+page_begin=1 page_index=89/128 page=0x0000000000059000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=389
+page_end=1 page_index=89/128 candidates=0 fsynced=1
+page_begin=1 page_index=90/128 page=0x000000000005a000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=352
+page_end=1 page_index=90/128 candidates=0 fsynced=1
+page_begin=1 page_index=91/128 page=0x000000000005b000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=355
+page_end=1 page_index=91/128 candidates=0 fsynced=1
+page_begin=1 page_index=92/128 page=0x000000000005c000 candidates=0 max_before=13 max_after=13 threshold=40 confirm=356
+page_end=1 page_index=92/128 candidates=0 fsynced=1
+page_begin=1 page_index=93/128 page=0x000000000005d000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=326
+page_end=1 page_index=93/128 candidates=0 fsynced=1
+page_begin=1 page_index=94/128 page=0x000000000005e000 candidates=1 max_before=153 max_after=152 threshold=40 confirm=344
+candidate_addr=0x00000079693a54d4 page=0x000000000005e000 offset=0x4d4 pile=initial accepted=0 t_before=153 t_after=152 page_index=94/128 target=0x0000007969348000 confirm=344
+page_end=1 page_index=94/128 candidates=1 fsynced=1
+page_begin=1 page_index=95/128 page=0x000000000005f000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=356
+page_end=1 page_index=95/128 candidates=0 fsynced=1
+page_begin=1 page_index=96/128 page=0x0000000000060000 candidates=0 max_before=13 max_after=13 threshold=40 confirm=345
+page_end=1 page_index=96/128 candidates=0 fsynced=1
+page_begin=1 page_index=97/128 page=0x0000000000061000 candidates=0 max_before=13 max_after=13 threshold=40 confirm=376
+page_end=1 page_index=97/128 candidates=0 fsynced=1
+page_begin=1 page_index=98/128 page=0x0000000000062000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=333
+page_end=1 page_index=98/128 candidates=0 fsynced=1
+page_begin=1 page_index=99/128 page=0x0000000000063000 candidates=1 max_before=153 max_after=151 threshold=40 confirm=333
+candidate_addr=0x00000079693aaf7c page=0x0000000000063000 offset=0xf7c pile=initial accepted=0 t_before=153 t_after=151 page_index=99/128 target=0x0000007969348000 confirm=333
+page_end=1 page_index=99/128 candidates=1 fsynced=1
+page_begin=1 page_index=100/128 page=0x0000000000064000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=341
+page_end=1 page_index=100/128 candidates=0 fsynced=1
+page_begin=1 page_index=101/128 page=0x0000000000065000 candidates=0 max_before=13 max_after=13 threshold=40 confirm=366
+page_end=1 page_index=101/128 candidates=0 fsynced=1
+page_begin=1 page_index=102/128 page=0x0000000000066000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=468
+page_end=1 page_index=102/128 candidates=0 fsynced=1
+page_begin=1 page_index=103/128 page=0x0000000000067000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=351
+page_end=1 page_index=103/128 candidates=0 fsynced=1
+page_begin=1 page_index=104/128 page=0x0000000000068000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=354
+page_end=1 page_index=104/128 candidates=0 fsynced=1
+page_begin=1 page_index=105/128 page=0x0000000000069000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=399
+page_end=1 page_index=105/128 candidates=0 fsynced=1
+page_begin=1 page_index=106/128 page=0x000000000006a000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=373
+page_end=1 page_index=106/128 candidates=0 fsynced=1
+page_begin=1 page_index=107/128 page=0x000000000006b000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=325
+page_end=1 page_index=107/128 candidates=0 fsynced=1
+page_begin=1 page_index=108/128 page=0x000000000006c000 candidates=1 max_before=342 max_after=227 threshold=40 confirm=337
+candidate_addr=0x00000079693b3e3c page=0x000000000006c000 offset=0xe3c pile=initial accepted=0 t_before=342 t_after=227 page_index=108/128 target=0x0000007969348000 confirm=337
+page_end=1 page_index=108/128 candidates=1 fsynced=1
+page_begin=1 page_index=109/128 page=0x000000000006d000 candidates=0 max_before=13 max_after=13 threshold=40 confirm=412
+page_end=1 page_index=109/128 candidates=0 fsynced=1
+page_begin=1 page_index=110/128 page=0x000000000006e000 candidates=0 max_before=10 max_after=10 threshold=40 confirm=358
+page_end=1 page_index=110/128 candidates=0 fsynced=1
+page_begin=1 page_index=111/128 page=0x000000000006f000 candidates=0 max_before=12 max_after=12 threshold=40 confirm=335
+page_end=1 page_index=111/128 candidates=0 fsynced=1
+page_begin=1 page_index=112/128 page=0x0000000000070000 candidates=1 max_before=354 max_after=166 threshold=40 confirm=409
+candidate_addr=0x00000079693b70c4 page=0x0000000000070000 offset=0x0c4 pile=initial accepted=0 t_before=354 t_after=166 page_index=112/128 target=0x0000007969348000 confirm=409
+page_end=1 page_index=112/128 candidates=1 fsynced=1
+page_begin=1 page_index=113/128 page=0x0000000000071000 candidates=1 max_before=347 max_after=159 threshold=40 confirm=363
+candidate_addr=0x00000079693b8124 page=0x0000000000071000 offset=0x124 pile=initial accepted=0 t_before=347 t_after=159 page_index=113/128 target=0x0000007969348000 confirm=363
+page_end=1 page_index=113/128 candidates=1 fsynced=1
+page_begin=1 page_index=114/128 page=0x0000000000072000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=373
+page_end=1 page_index=114/128 candidates=0 fsynced=1
+page_begin=1 page_index=115/128 page=0x0000000000073000 candidates=0 max_before=13 max_after=13 threshold=40 confirm=367
+page_end=1 page_index=115/128 candidates=0 fsynced=1
+page_begin=1 page_index=116/128 page=0x0000000000074000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=378
+page_end=1 page_index=116/128 candidates=0 fsynced=1
+page_begin=1 page_index=117/128 page=0x0000000000075000 candidates=0 max_before=10 max_after=11 threshold=40 confirm=373
+page_end=1 page_index=117/128 candidates=0 fsynced=1
+page_begin=1 page_index=118/128 page=0x0000000000076000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=323
+page_end=1 page_index=118/128 candidates=0 fsynced=1
+page_begin=1 page_index=119/128 page=0x0000000000077000 candidates=0 max_before=13 max_after=13 threshold=40 confirm=365
+page_end=1 page_index=119/128 candidates=0 fsynced=1
+page_begin=1 page_index=120/128 page=0x0000000000078000 candidates=0 max_before=13 max_after=13 threshold=40 confirm=398
+page_end=1 page_index=120/128 candidates=0 fsynced=1
+page_begin=1 page_index=121/128 page=0x0000000000079000 candidates=1 max_before=343 max_after=342 threshold=40 confirm=330
+candidate_addr=0x00000079693c052c page=0x0000000000079000 offset=0x52c pile=initial accepted=0 t_before=343 t_after=342 page_index=121/128 target=0x0000007969348000 confirm=330
+page_end=1 page_index=121/128 candidates=1 fsynced=1
+page_begin=1 page_index=122/128 page=0x000000000007a000 candidates=0 max_before=12 max_after=13 threshold=40 confirm=382
+page_end=1 page_index=122/128 candidates=0 fsynced=1
+page_begin=1 page_index=123/128 page=0x000000000007b000 candidates=2 max_before=349 max_after=349 threshold=40 confirm=398
+candidate_addr=0x00000079693c23f4 page=0x000000000007b000 offset=0x3f4 pile=initial accepted=0 t_before=348 t_after=158 page_index=123/128 target=0x0000007969348000 confirm=398
+candidate_addr=0x00000079693c2e3c page=0x000000000007b000 offset=0xe3c pile=initial accepted=0 t_before=349 t_after=349 page_index=123/128 target=0x0000007969348000 confirm=398
+page_end=1 page_index=123/128 candidates=2 fsynced=1
+page_begin=1 page_index=124/128 page=0x000000000007c000 candidates=0 max_before=10 max_after=10 threshold=40 confirm=334
+page_end=1 page_index=124/128 candidates=0 fsynced=1
+page_begin=1 page_index=125/128 page=0x000000000007d000 candidates=0 max_before=12 max_after=13 threshold=40 confirm=371
+page_end=1 page_index=125/128 candidates=0 fsynced=1
+page_begin=1 page_index=126/128 page=0x000000000007e000 candidates=1 max_before=346 max_after=156 threshold=40 confirm=424
+candidate_addr=0x00000079693c526c page=0x000000000007e000 offset=0x26c pile=initial accepted=0 t_before=346 t_after=156 page_index=126/128 target=0x0000007969348000 confirm=424
+page_end=1 page_index=126/128 candidates=1 fsynced=1
+page_begin=1 page_index=127/128 page=0x000000000007f000 candidates=1 max_before=224 max_after=225 threshold=40 confirm=409
+candidate_addr=0x00000079693c67bc page=0x000000000007f000 offset=0x7bc pile=initial accepted=0 t_before=224 t_after=225 page_index=127/128 target=0x0000007969348000 confirm=409
+page_end=1 page_index=127/128 candidates=1 fsynced=1
+page_begin=1 page_index=128/128 page=0x0000000000080000 candidates=0 max_before=11 max_after=11 threshold=40 confirm=389
+page_end=1 page_index=128/128 candidates=0 fsynced=1
+partial_header=1 pages_total=128 run=v15 append=1 boot_id=23f02d28-afd6-4ad0-b2b7-08958bf80882 uptime_ms=0
+page_begin=1 page_index=1/128 page=0x0000000000001000 candidates=0 max_before=17 max_after=16 threshold=60 confirm=357
+page_end=1 page_index=1/128 candidates=0 fsynced=1
+page_begin=1 page_index=2/128 page=0x0000000000002000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=333
+page_end=1 page_index=2/128 candidates=0 fsynced=1
+page_begin=1 page_index=3/128 page=0x0000000000003000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=342
+page_end=1 page_index=3/128 candidates=0 fsynced=1
+page_begin=1 page_index=4/128 page=0x0000000000004000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=704
+page_end=1 page_index=4/128 candidates=0 fsynced=1
+page_begin=1 page_index=5/128 page=0x0000000000005000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=305
+page_end=1 page_index=5/128 candidates=0 fsynced=1
+page_begin=1 page_index=6/128 page=0x0000000000006000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=358
+page_end=1 page_index=6/128 candidates=0 fsynced=1
+page_begin=1 page_index=7/128 page=0x0000000000007000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=325
+page_end=1 page_index=7/128 candidates=0 fsynced=1
+page_begin=1 page_index=8/128 page=0x0000000000008000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=360
+page_end=1 page_index=8/128 candidates=0 fsynced=1
+page_begin=1 page_index=9/128 page=0x0000000000009000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=387
+page_end=1 page_index=9/128 candidates=0 fsynced=1
+page_begin=1 page_index=10/128 page=0x000000000000a000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=412
+page_end=1 page_index=10/128 candidates=0 fsynced=1
+page_begin=1 page_index=11/128 page=0x000000000000b000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=781
+page_end=1 page_index=11/128 candidates=0 fsynced=1
+page_begin=1 page_index=12/128 page=0x000000000000c000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=302
+page_end=1 page_index=12/128 candidates=0 fsynced=1
+page_begin=1 page_index=13/128 page=0x000000000000d000 candidates=0 max_before=15 max_after=14 threshold=60 confirm=638
+page_end=1 page_index=13/128 candidates=0 fsynced=1
+page_begin=1 page_index=14/128 page=0x000000000000e000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=733
+page_end=1 page_index=14/128 candidates=0 fsynced=1
+page_begin=1 page_index=15/128 page=0x000000000000f000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=353
+page_end=1 page_index=15/128 candidates=0 fsynced=1
+page_begin=1 page_index=16/128 page=0x0000000000010000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=318
+page_end=1 page_index=16/128 candidates=0 fsynced=1
+page_begin=1 page_index=17/128 page=0x0000000000011000 candidates=0 max_before=14 max_after=15 threshold=60 confirm=331
+page_end=1 page_index=17/128 candidates=0 fsynced=1
+page_begin=1 page_index=18/128 page=0x0000000000012000 candidates=1 max_before=203 max_after=199 threshold=60 confirm=328
+candidate_addr=0x000000798a41203c page=0x0000000000012000 offset=0x03c pile=initial accepted=0 t_before=203 t_after=199 page_index=18/128 target=0x000000798a401000 confirm=328
+page_end=1 page_index=18/128 candidates=1 fsynced=1
+page_begin=1 page_index=19/128 page=0x0000000000013000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=894
+page_end=1 page_index=19/128 candidates=0 fsynced=1
+page_begin=1 page_index=20/128 page=0x0000000000014000 candidates=1 max_before=234 max_after=233 threshold=60 confirm=657
+candidate_addr=0x000000798a414e74 page=0x0000000000014000 offset=0xe74 pile=initial accepted=0 t_before=234 t_after=233 page_index=20/128 target=0x000000798a401000 confirm=657
+page_end=1 page_index=20/128 candidates=1 fsynced=1
+page_begin=1 page_index=21/128 page=0x0000000000015000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=698
+page_end=1 page_index=21/128 candidates=0 fsynced=1
+page_begin=1 page_index=22/128 page=0x0000000000016000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=394
+page_end=1 page_index=22/128 candidates=0 fsynced=1
+page_begin=1 page_index=23/128 page=0x0000000000017000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=726
+page_end=1 page_index=23/128 candidates=0 fsynced=1
+page_begin=1 page_index=24/128 page=0x0000000000018000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=304
+page_end=1 page_index=24/128 candidates=0 fsynced=1
+page_begin=1 page_index=25/128 page=0x0000000000019000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=353
+page_end=1 page_index=25/128 candidates=0 fsynced=1
+page_begin=1 page_index=26/128 page=0x000000000001a000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=405
+page_end=1 page_index=26/128 candidates=0 fsynced=1
+page_begin=1 page_index=27/128 page=0x000000000001b000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=754
+page_end=1 page_index=27/128 candidates=0 fsynced=1
+page_begin=1 page_index=28/128 page=0x000000000001c000 candidates=1 max_before=209 max_after=207 threshold=60 confirm=311
+candidate_addr=0x000000798a41ce94 page=0x000000000001c000 offset=0xe94 pile=initial accepted=0 t_before=209 t_after=207 page_index=28/128 target=0x000000798a401000 confirm=311
+page_end=1 page_index=28/128 candidates=1 fsynced=1
+page_begin=1 page_index=29/128 page=0x000000000001d000 candidates=0 max_before=14 max_after=15 threshold=60 confirm=709
+page_end=1 page_index=29/128 candidates=0 fsynced=1
+page_begin=1 page_index=30/128 page=0x000000000001e000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=337
+page_end=1 page_index=30/128 candidates=0 fsynced=1
+page_begin=1 page_index=31/128 page=0x000000000001f000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=732
+page_end=1 page_index=31/128 candidates=0 fsynced=1
+page_begin=1 page_index=32/128 page=0x0000000000020000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=364
+page_end=1 page_index=32/128 candidates=0 fsynced=1
+page_begin=1 page_index=33/128 page=0x0000000000021000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=725
+page_end=1 page_index=33/128 candidates=0 fsynced=1
+page_begin=1 page_index=34/128 page=0x0000000000022000 candidates=0 max_before=16 max_after=17 threshold=60 confirm=350
+page_end=1 page_index=34/128 candidates=0 fsynced=1
+page_begin=1 page_index=35/128 page=0x0000000000023000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=778
+page_end=1 page_index=35/128 candidates=0 fsynced=1
+page_begin=1 page_index=36/128 page=0x0000000000024000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=360
+page_end=1 page_index=36/128 candidates=0 fsynced=1
+page_begin=1 page_index=37/128 page=0x0000000000025000 candidates=1 max_before=208 max_after=208 threshold=60 confirm=370
+candidate_addr=0x000000798a425274 page=0x0000000000025000 offset=0x274 pile=initial accepted=0 t_before=208 t_after=208 page_index=37/128 target=0x000000798a401000 confirm=370
+page_end=1 page_index=37/128 candidates=1 fsynced=1
+page_begin=1 page_index=38/128 page=0x0000000000026000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=387
+page_end=1 page_index=38/128 candidates=0 fsynced=1
+page_begin=1 page_index=39/128 page=0x0000000000027000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=302
+page_end=1 page_index=39/128 candidates=0 fsynced=1
+page_begin=1 page_index=40/128 page=0x0000000000028000 candidates=0 max_before=14 max_after=15 threshold=60 confirm=709
+page_end=1 page_index=40/128 candidates=0 fsynced=1
+page_begin=1 page_index=41/128 page=0x0000000000029000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=793
+page_end=1 page_index=41/128 candidates=0 fsynced=1
+page_begin=1 page_index=42/128 page=0x000000000002a000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=357
+page_end=1 page_index=42/128 candidates=0 fsynced=1
+page_begin=1 page_index=43/128 page=0x000000000002b000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=342
+page_end=1 page_index=43/128 candidates=0 fsynced=1
+page_begin=1 page_index=44/128 page=0x000000000002c000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=718
+page_end=1 page_index=44/128 candidates=0 fsynced=1
+page_begin=1 page_index=45/128 page=0x000000000002d000 candidates=0 max_before=15 max_after=14 threshold=60 confirm=342
+page_end=1 page_index=45/128 candidates=0 fsynced=1
+page_begin=1 page_index=46/128 page=0x000000000002e000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=326
+page_end=1 page_index=46/128 candidates=0 fsynced=1
+page_begin=1 page_index=47/128 page=0x000000000002f000 candidates=0 max_before=14 max_after=15 threshold=60 confirm=428
+page_end=1 page_index=47/128 candidates=0 fsynced=1
+page_begin=1 page_index=48/128 page=0x0000000000030000 candidates=1 max_before=204 max_after=167 threshold=60 confirm=314
+candidate_addr=0x000000798a430a64 page=0x0000000000030000 offset=0xa64 pile=initial accepted=0 t_before=204 t_after=167 page_index=48/128 target=0x000000798a401000 confirm=314
+page_end=1 page_index=48/128 candidates=1 fsynced=1
+page_begin=1 page_index=49/128 page=0x0000000000031000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=433
+page_end=1 page_index=49/128 candidates=0 fsynced=1
+page_begin=1 page_index=50/128 page=0x0000000000032000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=359
+page_end=1 page_index=50/128 candidates=0 fsynced=1
+page_begin=1 page_index=51/128 page=0x0000000000033000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=1364
+page_end=1 page_index=51/128 candidates=0 fsynced=1
+page_begin=1 page_index=52/128 page=0x0000000000034000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=729
+page_end=1 page_index=52/128 candidates=0 fsynced=1
+page_begin=1 page_index=53/128 page=0x0000000000035000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=344
+page_end=1 page_index=53/128 candidates=0 fsynced=1
+page_begin=1 page_index=54/128 page=0x0000000000036000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=296
+page_end=1 page_index=54/128 candidates=0 fsynced=1
+page_begin=1 page_index=55/128 page=0x0000000000037000 candidates=1 max_before=183 max_after=181 threshold=60 confirm=341
+candidate_addr=0x000000798a437dd4 page=0x0000000000037000 offset=0xdd4 pile=initial accepted=0 t_before=183 t_after=181 page_index=55/128 target=0x000000798a401000 confirm=341
+page_end=1 page_index=55/128 candidates=1 fsynced=1
+page_begin=1 page_index=56/128 page=0x0000000000038000 candidates=1 max_before=182 max_after=181 threshold=60 confirm=739
+candidate_addr=0x000000798a438adc page=0x0000000000038000 offset=0xadc pile=initial accepted=0 t_before=182 t_after=181 page_index=56/128 target=0x000000798a401000 confirm=739
+page_end=1 page_index=56/128 candidates=1 fsynced=1
+page_begin=1 page_index=57/128 page=0x0000000000039000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=283
+page_end=1 page_index=57/128 candidates=0 fsynced=1
+page_begin=1 page_index=58/128 page=0x000000000003a000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=307
+page_end=1 page_index=58/128 candidates=0 fsynced=1
+page_begin=1 page_index=59/128 page=0x000000000003b000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=414
+page_end=1 page_index=59/128 candidates=0 fsynced=1
+page_begin=1 page_index=60/128 page=0x000000000003c000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=318
+page_end=1 page_index=60/128 candidates=0 fsynced=1
+page_begin=1 page_index=61/128 page=0x000000000003d000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=298
+page_end=1 page_index=61/128 candidates=0 fsynced=1
+page_begin=1 page_index=62/128 page=0x000000000003e000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=718
+page_end=1 page_index=62/128 candidates=0 fsynced=1
+page_begin=1 page_index=63/128 page=0x000000000003f000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=1325
+page_end=1 page_index=63/128 candidates=0 fsynced=1
+page_begin=1 page_index=64/128 page=0x0000000000040000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=378
+page_end=1 page_index=64/128 candidates=0 fsynced=1
+page_begin=1 page_index=65/128 page=0x0000000000041000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=348
+page_end=1 page_index=65/128 candidates=0 fsynced=1
+page_begin=1 page_index=66/128 page=0x0000000000042000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=385
+page_end=1 page_index=66/128 candidates=0 fsynced=1
+page_begin=1 page_index=67/128 page=0x0000000000043000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=382
+page_end=1 page_index=67/128 candidates=0 fsynced=1
+page_begin=1 page_index=68/128 page=0x0000000000044000 candidates=1 max_before=240 max_after=240 threshold=60 confirm=353
+candidate_addr=0x000000798a444cfc page=0x0000000000044000 offset=0xcfc pile=initial accepted=0 t_before=240 t_after=240 page_index=68/128 target=0x000000798a401000 confirm=353
+page_end=1 page_index=68/128 candidates=1 fsynced=1
+page_begin=1 page_index=69/128 page=0x0000000000045000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=386
+page_end=1 page_index=69/128 candidates=0 fsynced=1
+page_begin=1 page_index=70/128 page=0x0000000000046000 candidates=0 max_before=15 max_after=14 threshold=60 confirm=353
+page_end=1 page_index=70/128 candidates=0 fsynced=1
+page_begin=1 page_index=71/128 page=0x0000000000047000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=762
+page_end=1 page_index=71/128 candidates=0 fsynced=1
+page_begin=1 page_index=72/128 page=0x0000000000048000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=383
+page_end=1 page_index=72/128 candidates=0 fsynced=1
+page_begin=1 page_index=73/128 page=0x0000000000049000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=337
+page_end=1 page_index=73/128 candidates=0 fsynced=1
+page_begin=1 page_index=74/128 page=0x000000000004a000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=394
+page_end=1 page_index=74/128 candidates=0 fsynced=1
+page_begin=1 page_index=75/128 page=0x000000000004b000 candidates=1 max_before=165 max_after=166 threshold=60 confirm=322
+candidate_addr=0x000000798a44bb5c page=0x000000000004b000 offset=0xb5c pile=initial accepted=0 t_before=165 t_after=166 page_index=75/128 target=0x000000798a401000 confirm=322
+page_end=1 page_index=75/128 candidates=1 fsynced=1
+page_begin=1 page_index=76/128 page=0x000000000004c000 candidates=1 max_before=210 max_after=211 threshold=60 confirm=343
+candidate_addr=0x000000798a44c03c page=0x000000000004c000 offset=0x03c pile=initial accepted=0 t_before=210 t_after=211 page_index=76/128 target=0x000000798a401000 confirm=343
+page_end=1 page_index=76/128 candidates=1 fsynced=1
+page_begin=1 page_index=77/128 page=0x000000000004d000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=1041
+page_end=1 page_index=77/128 candidates=0 fsynced=1
+page_begin=1 page_index=78/128 page=0x000000000004e000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=376
+page_end=1 page_index=78/128 candidates=0 fsynced=1
+page_begin=1 page_index=79/128 page=0x000000000004f000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=319
+page_end=1 page_index=79/128 candidates=0 fsynced=1
+page_begin=1 page_index=80/128 page=0x0000000000050000 candidates=2 max_before=237 max_after=207 threshold=60 confirm=708
+candidate_addr=0x000000798a4502e4 page=0x0000000000050000 offset=0x2e4 pile=initial accepted=0 t_before=237 t_after=207 page_index=80/128 target=0x000000798a401000 confirm=708
+candidate_addr=0x000000798a450864 page=0x0000000000050000 offset=0x864 pile=initial accepted=0 t_before=192 t_after=193 page_index=80/128 target=0x000000798a401000 confirm=708
+page_end=1 page_index=80/128 candidates=2 fsynced=1
+page_begin=1 page_index=81/128 page=0x0000000000051000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=317
+page_end=1 page_index=81/128 candidates=0 fsynced=1
+page_begin=1 page_index=82/128 page=0x0000000000052000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=721
+page_end=1 page_index=82/128 candidates=0 fsynced=1
+page_begin=1 page_index=83/128 page=0x0000000000053000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=756
+page_end=1 page_index=83/128 candidates=0 fsynced=1
+page_begin=1 page_index=84/128 page=0x0000000000054000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=311
+page_end=1 page_index=84/128 candidates=0 fsynced=1
+page_begin=1 page_index=85/128 page=0x0000000000055000 candidates=0 max_before=15 max_after=14 threshold=60 confirm=306
+page_end=1 page_index=85/128 candidates=0 fsynced=1
+page_begin=1 page_index=86/128 page=0x0000000000056000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=372
+page_end=1 page_index=86/128 candidates=0 fsynced=1
+page_begin=1 page_index=87/128 page=0x0000000000057000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=342
+page_end=1 page_index=87/128 candidates=0 fsynced=1
+page_begin=1 page_index=88/128 page=0x0000000000058000 candidates=1 max_before=210 max_after=170 threshold=60 confirm=1298
+candidate_addr=0x000000798a458d3c page=0x0000000000058000 offset=0xd3c pile=initial accepted=0 t_before=210 t_after=170 page_index=88/128 target=0x000000798a401000 confirm=1298
+page_end=1 page_index=88/128 candidates=1 fsynced=1
+page_begin=1 page_index=89/128 page=0x0000000000059000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=321
+page_end=1 page_index=89/128 candidates=0 fsynced=1
+page_begin=1 page_index=90/128 page=0x000000000005a000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=901
+page_end=1 page_index=90/128 candidates=0 fsynced=1
+page_begin=1 page_index=91/128 page=0x000000000005b000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=844
+page_end=1 page_index=91/128 candidates=0 fsynced=1
+page_begin=1 page_index=92/128 page=0x000000000005c000 candidates=0 max_before=14 max_after=15 threshold=60 confirm=722
+page_end=1 page_index=92/128 candidates=0 fsynced=1
+page_begin=1 page_index=93/128 page=0x000000000005d000 candidates=2 max_before=215 max_after=227 threshold=60 confirm=791
+candidate_addr=0x000000798a45df9c page=0x000000000005d000 offset=0xf9c pile=initial accepted=0 t_before=215 t_after=227 page_index=93/128 target=0x000000798a401000 confirm=791
+candidate_addr=0x000000798a45dfb4 page=0x000000000005d000 offset=0xfb4 pile=initial accepted=0 t_before=174 t_after=174 page_index=93/128 target=0x000000798a401000 confirm=791
+page_end=1 page_index=93/128 candidates=2 fsynced=1
+page_begin=1 page_index=94/128 page=0x000000000005e000 candidates=1 max_before=163 max_after=162 threshold=60 confirm=696
+candidate_addr=0x000000798a45ee5c page=0x000000000005e000 offset=0xe5c pile=initial accepted=0 t_before=163 t_after=162 page_index=94/128 target=0x000000798a401000 confirm=696
+page_end=1 page_index=94/128 candidates=1 fsynced=1
+page_begin=1 page_index=95/128 page=0x000000000005f000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=318
+page_end=1 page_index=95/128 candidates=0 fsynced=1
+page_begin=1 page_index=96/128 page=0x0000000000060000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=321
+page_end=1 page_index=96/128 candidates=0 fsynced=1
+page_begin=1 page_index=97/128 page=0x0000000000061000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=408
+page_end=1 page_index=97/128 candidates=0 fsynced=1
+page_begin=1 page_index=98/128 page=0x0000000000062000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=340
+page_end=1 page_index=98/128 candidates=0 fsynced=1
+page_begin=1 page_index=99/128 page=0x0000000000063000 candidates=1 max_before=209 max_after=210 threshold=60 confirm=410
+candidate_addr=0x000000798a463994 page=0x0000000000063000 offset=0x994 pile=initial accepted=0 t_before=209 t_after=210 page_index=99/128 target=0x000000798a401000 confirm=410
+page_end=1 page_index=99/128 candidates=1 fsynced=1
+page_begin=1 page_index=100/128 page=0x0000000000064000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=785
+page_end=1 page_index=100/128 candidates=0 fsynced=1
+page_begin=1 page_index=101/128 page=0x0000000000065000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=434
+page_end=1 page_index=101/128 candidates=0 fsynced=1
+page_begin=1 page_index=102/128 page=0x0000000000066000 candidates=1 max_before=170 max_after=166 threshold=60 confirm=1015
+candidate_addr=0x000000798a46666c page=0x0000000000066000 offset=0x66c pile=initial accepted=0 t_before=170 t_after=166 page_index=102/128 target=0x000000798a401000 confirm=1015
+page_end=1 page_index=102/128 candidates=1 fsynced=1
+page_begin=1 page_index=103/128 page=0x0000000000067000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=350
+page_end=1 page_index=103/128 candidates=0 fsynced=1
+page_begin=1 page_index=104/128 page=0x0000000000068000 candidates=0 max_before=15 max_after=14 threshold=60 confirm=382
+page_end=1 page_index=104/128 candidates=0 fsynced=1
+page_begin=1 page_index=105/128 page=0x0000000000069000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=778
+page_end=1 page_index=105/128 candidates=0 fsynced=1
+page_begin=1 page_index=106/128 page=0x000000000006a000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=396
+page_end=1 page_index=106/128 candidates=0 fsynced=1
+page_begin=1 page_index=107/128 page=0x000000000006b000 candidates=2 max_before=196 max_after=197 threshold=60 confirm=335
+candidate_addr=0x000000798a46bb9c page=0x000000000006b000 offset=0xb9c pile=initial accepted=0 t_before=188 t_after=173 page_index=107/128 target=0x000000798a401000 confirm=335
+candidate_addr=0x000000798a46bf74 page=0x000000000006b000 offset=0xf74 pile=initial accepted=0 t_before=196 t_after=197 page_index=107/128 target=0x000000798a401000 confirm=335
+page_end=1 page_index=107/128 candidates=2 fsynced=1
+page_begin=1 page_index=108/128 page=0x000000000006c000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=877
+page_end=1 page_index=108/128 candidates=0 fsynced=1
+page_begin=1 page_index=109/128 page=0x000000000006d000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=322
+page_end=1 page_index=109/128 candidates=0 fsynced=1
+page_begin=1 page_index=110/128 page=0x000000000006e000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=333
+page_end=1 page_index=110/128 candidates=0 fsynced=1
+page_begin=1 page_index=111/128 page=0x000000000006f000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=359
+page_end=1 page_index=111/128 candidates=0 fsynced=1
+page_begin=1 page_index=112/128 page=0x0000000000070000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=363
+page_end=1 page_index=112/128 candidates=0 fsynced=1
+page_begin=1 page_index=113/128 page=0x0000000000071000 candidates=0 max_before=14 max_after=15 threshold=60 confirm=415
+page_end=1 page_index=113/128 candidates=0 fsynced=1
+page_begin=1 page_index=114/128 page=0x0000000000072000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=702
+page_end=1 page_index=114/128 candidates=0 fsynced=1
+page_begin=1 page_index=115/128 page=0x0000000000073000 candidates=1 max_before=208 max_after=209 threshold=60 confirm=941
+candidate_addr=0x000000798a4732c4 page=0x0000000000073000 offset=0x2c4 pile=initial accepted=0 t_before=208 t_after=209 page_index=115/128 target=0x000000798a401000 confirm=941
+page_end=1 page_index=115/128 candidates=1 fsynced=1
+page_begin=1 page_index=116/128 page=0x0000000000074000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=852
+page_end=1 page_index=116/128 candidates=0 fsynced=1
+page_begin=1 page_index=117/128 page=0x0000000000075000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=372
+page_end=1 page_index=117/128 candidates=0 fsynced=1
+page_begin=1 page_index=118/128 page=0x0000000000076000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=328
+page_end=1 page_index=118/128 candidates=0 fsynced=1
+page_begin=1 page_index=119/128 page=0x0000000000077000 candidates=1 max_before=171 max_after=169 threshold=60 confirm=397
+candidate_addr=0x000000798a477804 page=0x0000000000077000 offset=0x804 pile=initial accepted=0 t_before=171 t_after=169 page_index=119/128 target=0x000000798a401000 confirm=397
+page_end=1 page_index=119/128 candidates=1 fsynced=1
+page_begin=1 page_index=120/128 page=0x0000000000078000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=375
+page_end=1 page_index=120/128 candidates=0 fsynced=1
+page_begin=1 page_index=121/128 page=0x0000000000079000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=401
+page_end=1 page_index=121/128 candidates=0 fsynced=1
+page_begin=1 page_index=122/128 page=0x000000000007a000 candidates=1 max_before=198 max_after=170 threshold=60 confirm=757
+candidate_addr=0x000000798a47ac5c page=0x000000000007a000 offset=0xc5c pile=initial accepted=0 t_before=198 t_after=170 page_index=122/128 target=0x000000798a401000 confirm=757
+page_end=1 page_index=122/128 candidates=1 fsynced=1
+page_begin=1 page_index=123/128 page=0x000000000007b000 candidates=1 max_before=174 max_after=170 threshold=60 confirm=1674
+candidate_addr=0x000000798a47b28c page=0x000000000007b000 offset=0x28c pile=initial accepted=0 t_before=174 t_after=170 page_index=123/128 target=0x000000798a401000 confirm=1674
+page_end=1 page_index=123/128 candidates=1 fsynced=1
+page_begin=1 page_index=124/128 page=0x000000000007c000 candidates=0 max_before=16 max_after=16 threshold=60 confirm=662
+page_end=1 page_index=124/128 candidates=0 fsynced=1
+page_begin=1 page_index=125/128 page=0x000000000007d000 candidates=0 max_before=15 max_after=15 threshold=60 confirm=721
+page_end=1 page_index=125/128 candidates=0 fsynced=1
+page_begin=1 page_index=126/128 page=0x000000000007e000 candidates=1 max_before=209 max_after=210 threshold=60 confirm=774
+candidate_addr=0x000000798a47eb6c page=0x000000000007e000 offset=0xb6c pile=initial accepted=0 t_before=209 t_after=210 page_index=126/128 target=0x000000798a401000 confirm=774
+page_end=1 page_index=126/128 candidates=1 fsynced=1
+page_begin=1 page_index=127/128 page=0x000000000007f000 candidates=1 max_before=233 max_after=165 threshold=60 confirm=371
+candidate_addr=0x000000798a47fc64 page=0x000000000007f000 offset=0xc64 pile=initial accepted=0 t_before=233 t_after=165 page_index=127/128 target=0x000000798a401000 confirm=371
+page_end=1 page_index=127/128 candidates=1 fsynced=1
+page_begin=1 page_index=128/128 page=0x0000000000080000 candidates=0 max_before=14 max_after=14 threshold=60 confirm=687
+page_end=1 page_index=128/128 candidates=0 fsynced=1

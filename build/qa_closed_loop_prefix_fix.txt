@@ -1,0 +1,22 @@
+QA closed-loop private prefix fix audit
+
+Verdict: PASS
+
+Source commit: ghostlock-cve-2026-43499-4.19-k40 01c90e949bb19f4c0fedef2974473350bc080488
+- Changed file: src/closed_loop/util.c only.
+- `closed_loop_path_is_private` keeps the exact `/data/data/org.mozilla.firefox/files` prefix.
+- Adds only the exact `/data/user/0/org.mozilla.firefox/files` prefix; other Android users, broader `/data`, `/data/local/tmp`, and wildcard paths are not accepted.
+- Lexical checks reject `..`, trailing slash, symlinks, and directories.
+- Canonical parent resolution must resolve to one of the two exact private prefixes.
+- Key range: lines 580-649 at commit 01c90e9.
+
+myroot commit: c54ba65d46780e1bbc811c358f6d8d0c8957e936
+- Artifact: so/ghostlock_closed_loop.so
+- size: 212384
+- sha256: e2704edc1cfc1a05987226327674fd2ca542602f79800c9873c97f560576aaa5
+- ELF entry: 0x2CA14
+- Verified from artifact bytes and aligned with docs/closed-loop-provenance-v15.md, exploit.js, manifest.json, and tools/harness_v15_selftest.mjs.
+- Harness selftest: HARNESS_V15_SELFTEST=PASS.
+- Harness and manifest continue to select only `/data/data/org.mozilla.firefox/files` paths; they do not relax to `/data/user/0`.
+
+Offline audit only. No adb/device commands were run.

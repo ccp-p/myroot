@@ -1,0 +1,17 @@
+QA closed-loop fix audit
+
+Verdict: PASS
+
+Source commit: ghostlock-cve-2026-43499-4.19-k40 97a7f7b5a7db9c8a22df69184e2807c23cb70b81
+- src/fops.c: only two additions, `#ifndef KS_BUILD_ROOTCHAIN` before `do_pselect_fake_lock_route` and matching `#endif` after it.
+- src/s2_support.c: only additions are `atomic_int pipe_prepare_request`, `atomic_int pipe_prepare_done`, and the no-op `set_cached_leaked_mm` stub.
+- No other source changes appeared in the commit.
+
+myroot commit: cafef503079727f6a008807bd3bc68350eda58b4
+- Provenance: docs/closed-loop-provenance-v15.md
+- Artifact: so/ghostlock_closed_loop.so
+- size: 212088
+- sha256: 9df6623e2dec606f74f10fc76e8f69e5206ca0ccc9306410ad351c7fe3e442d6
+- ELF entry: 0x2C930
+- Verified from the artifact bytes, exploit.js constants, manifest.json entries, and provenance doc.
+- Harness selftest: HARNESS_V15_SELFTEST=PASS.
